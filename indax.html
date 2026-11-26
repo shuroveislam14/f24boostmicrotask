@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-    <script>if(localStorage.getItem("f24_user"))document.documentElement.classList.add("has-session")</script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@500;700;800&family=Hind+Siliguri:wght@400;500;600&display=swap" rel="stylesheet" />
     <link rel="preconnect" href="https://www.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
-    <meta name="description" content="F24 Boost — micro-task marketplace. Find projects, complete tasks, submit proof and track rewards." />
-    <meta name="theme-color" content="#17133b" />
-    <title>F24 Boost – Micro Task Marketplace</title>
+    <title>F24 Boost – User App V12.2</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <script type="importmap">
@@ -25,64 +20,64 @@
     <style>
         /* ===== ALL STYLES ===== */
         * { box-sizing: border-box; }
-        body { background: #f4f2fc; font-family: 'Segoe UI', system-ui, sans-serif; margin: 0; padding: 0; min-height: 100vh; transition: background 0.3s, color 0.3s; }
-        body.dark-mode { background: #130f2a; color: #ffffff; }
-        body.dark-mode .wallet-card:not(.dark-bg) { background: #1d1740; color: #ffffff; }
+        body { background: #f0f2f5; font-family: 'Segoe UI', system-ui, sans-serif; margin: 0; padding: 0; min-height: 100vh; transition: background 0.3s, color 0.3s; }
+        body.dark-mode { background: #1a1a2e; color: #ffffff; }
+        body.dark-mode .wallet-card:not(.dark-bg) { background: #16213e; color: #ffffff; }
         body.dark-mode .project-card, body.dark-mode .post-card, body.dark-mode .profile-header, body.dark-mode .profile-menu,
         body.dark-mode .create-post-area, body.dark-mode .search-wrap, body.dark-mode .submission-card,
-        body.dark-mode .user-profile-card, body.dark-mode .my-project-card { background: #1d1740; color: #ffffff; border-color: #3a2f6b; }
+        body.dark-mode .user-profile-card, body.dark-mode .my-project-card { background: #16213e; color: #ffffff; border-color: #2a3a5e; }
         body.dark-mode .search-wrap input { color: #ffffff; }
-        body.dark-mode .platform-btn { background: #1d1740; color: #ffffff; border-color: #3a2f6b; }
-        body.dark-mode .platform-btn.active { background: #6c3ce0; color: #ffffff; }
-        body.dark-mode .bottom-nav { background: #1d1740; border-color: #3a2f6b; }
+        body.dark-mode .platform-btn { background: #16213e; color: #ffffff; border-color: #2a3a5e; }
+        body.dark-mode .platform-btn.active { background: #0d6efd; color: #ffffff; }
+        body.dark-mode .bottom-nav { background: #16213e; border-color: #2a3a5e; }
         body.dark-mode .bottom-nav .nav-item { color: #8a9aa8; }
-        body.dark-mode .bottom-nav .nav-item.active { color: #6c3ce0; }
-        body.dark-mode .notice-bar { background: #3a2f6b; border-color: #6c3ce0; color: #ffffff; }
+        body.dark-mode .bottom-nav .nav-item.active { color: #0d6efd; }
+        body.dark-mode .notice-bar { background: #2a3a5e; border-color: #0d6efd; color: #ffffff; }
         body.dark-mode .notice-bar .notice-text { color: #ffffff; }
-        body.dark-mode .modal-content { background: #1d1740; color: #ffffff; }
-        body.dark-mode .form-control { background: #0f0b24; color: #ffffff; border-color: #3a2f6b; }
+        body.dark-mode .modal-content { background: #16213e; color: #ffffff; }
+        body.dark-mode .form-control { background: #0f1a2e; color: #ffffff; border-color: #2a3a5e; }
         body.dark-mode .form-control::placeholder { color: #6a7a8e; }
         body.dark-mode .text-muted { color: #8a9aa8 !important; }
-        body.dark-mode .wallet-card .wallet-stats { border-color: #3a2f6b; }
-        body.dark-mode .transaction-item { background: #0f0b24 !important; }
-        body.dark-mode .coin-package { background: #0f0b24 !important; border-color: #3a2f6b !important; }
-        body.dark-mode .coin-package.active { border-color: #6c3ce0 !important; background: #2a2160 !important; }
-        body.dark-mode .payment-method { background: #0f0b24 !important; border-color: #3a2f6b !important; }
-        body.dark-mode .payment-method.active { border-color: #6c3ce0 !important; background: #2a2160 !important; }
-        body.dark-mode .referral-card { background: #0f0b24 !important; border-color: #3a2f6b !important; }
-        body.dark-mode .tab-btn { background: #0f0b24 !important; border-color: #3a2f6b !important; color: #8a9aa8 !important; }
-        body.dark-mode .tab-btn.active { background: #6c3ce0 !important; color: #ffffff !important; }
-        body.dark-mode .project-stat-card { background: #0f0b24 !important; border-color: #3a2f6b !important; }
-        body.dark-mode .submission-task-card { background: #0f0b24 !important; border-color: #3a2f6b !important; }
-        body.dark-mode .submission-detail-card { background: #1d1740 !important; border-color: #3a2f6b !important; color: #ffffff !important; }
-        body.dark-mode .submission-detail-card .task-item { background: #0f0b24 !important; border-color: #3a2f6b !important; color: #ffffff !important; }
-        body.dark-mode .submission-participant-card { background: #0f0b24 !important; border-color: #3a2f6b !important; color: #ffffff !important; }
-        body.dark-mode .ad-card { background: #1d1740 !important; border-color: #3a2f6b !important; color: #ffffff !important; }
+        body.dark-mode .wallet-card .wallet-stats { border-color: #2a3a5e; }
+        body.dark-mode .transaction-item { background: #0f1a2e !important; }
+        body.dark-mode .coin-package { background: #0f1a2e !important; border-color: #2a3a5e !important; }
+        body.dark-mode .coin-package.active { border-color: #0d6efd !important; background: #1a2a4e !important; }
+        body.dark-mode .payment-method { background: #0f1a2e !important; border-color: #2a3a5e !important; }
+        body.dark-mode .payment-method.active { border-color: #0d6efd !important; background: #1a2a4e !important; }
+        body.dark-mode .referral-card { background: #0f1a2e !important; border-color: #2a3a5e !important; }
+        body.dark-mode .tab-btn { background: #0f1a2e !important; border-color: #2a3a5e !important; color: #8a9aa8 !important; }
+        body.dark-mode .tab-btn.active { background: #0d6efd !important; color: #ffffff !important; }
+        body.dark-mode .project-stat-card { background: #0f1a2e !important; border-color: #2a3a5e !important; }
+        body.dark-mode .submission-task-card { background: #0f1a2e !important; border-color: #2a3a5e !important; }
+        body.dark-mode .submission-detail-card { background: #16213e !important; border-color: #2a3a5e !important; color: #ffffff !important; }
+        body.dark-mode .submission-detail-card .task-item { background: #0f1a2e !important; border-color: #2a3a5e !important; color: #ffffff !important; }
+        body.dark-mode .submission-participant-card { background: #0f1a2e !important; border-color: #2a3a5e !important; color: #ffffff !important; }
+        body.dark-mode .ad-card { background: #16213e !important; border-color: #2a3a5e !important; color: #ffffff !important; }
         body.dark-mode .ad-card .ad-title { color: #ffffff !important; }
-        body.dark-mode .ad-card .ad-link { color: #6c3ce0 !important; }
-        body.dark-mode .help-section { background: #1d1740 !important; border-color: #3a2f6b !important; color: #ffffff !important; }
-        body.dark-mode .help-section .faq-item { border-color: #3a2f6b !important; }
-        body.dark-mode .help-section .contact-item { background: #0f0b24 !important; border-color: #3a2f6b !important; }
-        body.dark-mode .premium-card { background: #0f0b24 !important; border-color: #3a2f6b !important; }
+        body.dark-mode .ad-card .ad-link { color: #0d6efd !important; }
+        body.dark-mode .help-section { background: #16213e !important; border-color: #2a3a5e !important; color: #ffffff !important; }
+        body.dark-mode .help-section .faq-item { border-color: #2a3a5e !important; }
+        body.dark-mode .help-section .contact-item { background: #0f1a2e !important; border-color: #2a3a5e !important; }
+        body.dark-mode .premium-card { background: #0f1a2e !important; border-color: #2a3a5e !important; }
         body.dark-mode .premium-card .premium-price { color: #f9c74f !important; }
-        body.dark-mode .payment-method-card { background: #0f0b24 !important; border-color: #3a2f6b !important; }
-        body.dark-mode .payment-method-card .method-logo { background: #2a2160; }
-        body.dark-mode .video-tutorial-card { background: #0f0b24 !important; border-color: #3a2f6b !important; }
-        body.dark-mode .task-filter-btn { background: #0f0b24 !important; border-color: #3a2f6b !important; color: #8a9aa8 !important; }
-        body.dark-mode .task-filter-btn.active { background: #6c3ce0 !important; color: #ffffff !important; }
-        body.dark-mode .category-tab-btn { background: #0f0b24 !important; border-color: #3a2f6b !important; color: #8a9aa8 !important; }
-        body.dark-mode .category-tab-btn.active { background: #6c3ce0 !important; color: #ffffff !important; }
-        body.dark-mode .big-link-box { background: #0f0b24 !important; border-color: #6c3ce0 !important; }
+        body.dark-mode .payment-method-card { background: #0f1a2e !important; border-color: #2a3a5e !important; }
+        body.dark-mode .payment-method-card .method-logo { background: #1a2a4e; }
+        body.dark-mode .video-tutorial-card { background: #0f1a2e !important; border-color: #2a3a5e !important; }
+        body.dark-mode .task-filter-btn { background: #0f1a2e !important; border-color: #2a3a5e !important; color: #8a9aa8 !important; }
+        body.dark-mode .task-filter-btn.active { background: #0d6efd !important; color: #ffffff !important; }
+        body.dark-mode .category-tab-btn { background: #0f1a2e !important; border-color: #2a3a5e !important; color: #8a9aa8 !important; }
+        body.dark-mode .category-tab-btn.active { background: #0d6efd !important; color: #ffffff !important; }
+        body.dark-mode .big-link-box { background: #0f1a2e !important; border-color: #0d6efd !important; }
         body.dark-mode .big-link-box .big-link-label { color: #ffffff !important; }
         body.dark-mode .big-link-box .big-link-url { color: #4da3ff !important; }
         body.dark-mode .big-link-box .big-link-title { color: #ffffff !important; }
 
-        .payment-method.active { border-color: #6c3ce0 !important; background: #e8f0fe !important; box-shadow: 0 0 0 2px rgba(13,110,253,0.2); }
+        .payment-method.active { border-color: #0d6efd !important; background: #e8f0fe !important; box-shadow: 0 0 0 2px rgba(13,110,253,0.2); }
         .hidden { display: none !important; }
         #userApp { display: none; padding-bottom: 80px; }
 
         /* ===== APP BAR ===== */
-        .app-bar { background: linear-gradient(145deg, #24154f, #3a2285); color: white; padding: 12px 16px; position: sticky; top: 0; z-index: 100; }
+        .app-bar { background: linear-gradient(145deg, #0b2b4a, #1a3f5c); color: white; padding: 12px 16px; position: sticky; top: 0; z-index: 100; }
         .app-bar .top-row { display: flex; align-items: center; justify-content: space-between; }
         .app-bar .menu-icon { font-size: 1.4rem; cursor: pointer; }
         .app-bar .logo { font-weight: 700; font-size: 1.2rem; cursor: pointer; display: flex; align-items: center; gap: 6px; }
@@ -91,18 +86,18 @@
         .app-bar .right-icons i { font-size: 1.2rem; cursor: pointer; position: relative; }
         .app-bar .coin-badge { background: rgba(255,215,0,0.2); padding: 4px 12px; border-radius: 40px; font-weight: 600; font-size: 0.85rem; border: 1px solid rgba(255,215,0,0.2); cursor: pointer; }
         .app-bar .level-badge { background: #f9c74f; color: #1e2f3d; font-size: 10px; font-weight: 700; padding: 2px 10px; border-radius: 40px; margin-left: 4px; }
-        .app-bar .badge-dot { position: absolute; top: -4px; right: -6px; width: 10px; height: 10px; background: #dc3545; border-radius: 50%; border: 2px solid #24154f; display: none; }
+        .app-bar .badge-dot { position: absolute; top: -4px; right: -6px; width: 10px; height: 10px; background: #dc3545; border-radius: 50%; border: 2px solid #0b2b4a; display: none; }
         .app-bar .badge-dot.show { display: block; }
 
         /* ===== SIDE MENU ===== */
-        .side-menu { position: fixed; top: 0; left: -300px; width: 280px; height: 100vh; background: #24154f; color: white; z-index: 9999; transition: left 0.3s ease; padding: 20px 0; overflow-y: auto; }
+        .side-menu { position: fixed; top: 0; left: -300px; width: 280px; height: 100vh; background: #0b2b4a; color: white; z-index: 9999; transition: left 0.3s ease; padding: 20px 0; overflow-y: auto; }
         .side-menu.open { left: 0; }
         .side-menu .menu-header { padding: 0 20px 16px; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center; }
         .side-menu .menu-header .logo-text { font-size: 1.3rem; font-weight: 700; }
         .side-menu .menu-header .logo-text i { color: #f9c74f; }
         .side-menu .menu-header .close-btn { background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
         .side-menu .user-info { padding: 16px 20px; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; gap: 12px; }
-        .side-menu .user-info .avatar { width: 50px; height: 50px; border-radius: 50%; background: #3a2f6b; overflow: hidden; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
+        .side-menu .user-info .avatar { width: 50px; height: 50px; border-radius: 50%; background: #2a3a5e; overflow: hidden; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
         .side-menu .user-info .avatar img { width: 100%; height: 100%; object-fit: cover; }
         .side-menu .user-info .user-details .name { font-weight: 600; font-size: 0.95rem; }
         .side-menu .user-info .user-details .username { font-size: 0.75rem; opacity: 0.7; }
@@ -122,8 +117,8 @@
         .bottom-nav { position: fixed; bottom: 0; left: 0; width: 100%; background: rgba(255,255,255,0.97); border-top: 1px solid #dce1e8; display: flex; justify-content: space-around; padding: 6px 0 10px; backdrop-filter: blur(4px); z-index: 999; transition: background 0.3s, border-color 0.3s; }
         .bottom-nav .nav-item { text-align: center; color: #5d6c7a; text-decoration: none; font-size: 10px; font-weight: 500; flex: 1; cursor: pointer; transition: color 0.2s; }
         .bottom-nav .nav-item i { font-size: 22px; display: block; margin-bottom: 1px; }
-        .bottom-nav .nav-item.active { color: #6c3ce0; }
-        .bottom-nav .nav-item.create-btn i { font-size: 32px; color: #6c3ce0; margin-top: -10px; background: white; padding: 4px; border-radius: 50%; box-shadow: 0 2px 12px rgba(13,110,253,0.3); }
+        .bottom-nav .nav-item.active { color: #0d6efd; }
+        .bottom-nav .nav-item.create-btn i { font-size: 32px; color: #0d6efd; margin-top: -10px; background: white; padding: 4px; border-radius: 50%; box-shadow: 0 2px 12px rgba(13,110,253,0.3); }
 
         /* ===== PAGE SECTIONS ===== */
         .page-section { display: none; padding: 12px 0; animation: fadeIn 0.3s ease; }
@@ -131,7 +126,7 @@
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
         /* ===== WALLET ===== */
-        .wallet-card { background: linear-gradient(145deg, #24154f, #3a2285); border-radius: 20px; padding: 18px 20px; color: white; margin-bottom: 14px; transition: background 0.3s, color 0.3s; }
+        .wallet-card { background: linear-gradient(145deg, #0b2b4a, #1a3f5c); border-radius: 20px; padding: 18px 20px; color: white; margin-bottom: 14px; transition: background 0.3s, color 0.3s; }
         .wallet-card .wallet-row { display: flex; justify-content: space-between; align-items: center; }
         .wallet-card .coin-amount { font-size: 2rem; font-weight: 700; }
         .wallet-card .coin-amount small { font-size: 0.8rem; font-weight: 400; opacity: 0.7; }
@@ -174,7 +169,7 @@
         .category-tabs { display: flex; gap: 6px; overflow-x: auto; padding: 4px 0 10px; margin-bottom: 4px; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
         .category-tabs::-webkit-scrollbar { display: none; }
         .category-tab-btn { flex-shrink: 0; padding: 6px 16px; border-radius: 40px; border: 2px solid #e2e8f0; background: white; font-size: 0.7rem; font-weight: 600; color: #5d6f80; cursor: pointer; transition: all 0.2s; white-space: nowrap; }
-        .category-tab-btn.active { border-color: #6c3ce0; background: #e8f0fe; color: #6c3ce0; }
+        .category-tab-btn.active { border-color: #0d6efd; background: #e8f0fe; color: #0d6efd; }
         .category-tab-btn i { margin-right: 4px; }
 
         /* ===== PLATFORM + TASK FILTER ===== */
@@ -182,13 +177,13 @@
         .platform-task-section .filter-label { font-size: 0.65rem; color: #8a9aa8; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
         .task-filter-grid { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
         .task-filter-btn { padding: 4px 12px; border-radius: 40px; border: 2px solid #e2e8f0; background: white; font-size: 0.65rem; font-weight: 600; color: #5d6f80; cursor: pointer; transition: all 0.2s; }
-        .task-filter-btn.active { border-color: #6c3ce0; background: #e8f0fe; color: #6c3ce0; }
+        .task-filter-btn.active { border-color: #0d6efd; background: #e8f0fe; color: #0d6efd; }
         .task-filter-btn i { margin-right: 3px; }
 
         /* ===== PLATFORM SELECT GRID ===== */
         .platform-select-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-bottom: 10px; }
         .platform-select-grid .platform-btn { padding: 10px 6px; border-radius: 14px; border: 2px solid #e2e8f0; background: white; text-align: center; cursor: pointer; transition: 0.15s; font-weight: 600; font-size: 0.65rem; color: #2d3f4f; }
-        .platform-select-grid .platform-btn.active { border-color: #6c3ce0; background: #e8f0fe; color: #6c3ce0; }
+        .platform-select-grid .platform-btn.active { border-color: #0d6efd; background: #e8f0fe; color: #0d6efd; }
         .platform-select-grid .platform-btn i { font-size: 1.2rem; display: block; margin-bottom: 3px; }
 
         /* ===== PROJECT GRID ===== */
@@ -239,18 +234,18 @@
         .project-body .creator-avatar { width: 24px; height: 24px; border-radius: 50%; background: #dce3ec; overflow: hidden; display: flex; align-items: center; justify-content: center; font-size: 0.6rem; color: #5d6f80; flex-shrink: 0; }
         .project-body .creator-avatar img { width: 100%; height: 100%; object-fit: cover; }
         .project-body .creator-name { font-size: 0.7rem; color: #4b5b6b; font-weight: 600; }
-        .project-body .creator-name:hover { color: #6c3ce0; }
+        .project-body .creator-name:hover { color: #0d6efd; }
         .project-body .creator-badge { font-size: 0.5rem; background: #f9c74f; color: #1e2f3d; padding: 1px 6px; border-radius: 40px; font-weight: 700; }
         .project-body h6 { font-weight: 700; font-size: 0.85rem; margin: 2px 0 4px; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
         .project-details { font-size: 0.65rem; margin: 4px 0; }
         .project-details .detail-row { display: flex; justify-content: space-between; padding: 1px 0; border-bottom: 1px solid #f1f4f9; }
         .project-details .detail-row:last-child { border-bottom: none; }
         .project-details .detail-row span { color: #8a9aa8; }
-        .project-details .detail-row strong { color: #24154f; font-weight: 600; }
+        .project-details .detail-row strong { color: #0b2b4a; font-weight: 600; }
         .project-body .progress-bar { height: 4px; background: #e2e8f0; border-radius: 40px; overflow: hidden; margin: 4px 0 2px; }
-        .project-body .progress-bar .fill { height: 100%; background: #6c3ce0; border-radius: 40px; }
+        .project-body .progress-bar .fill { height: 100%; background: #0d6efd; border-radius: 40px; }
         .project-body .progress-info { display: flex; justify-content: space-between; font-size: 0.55rem; color: #8a9aa8; }
-        .btn-open { background: #6c3ce0; color: white; border: none; border-radius: 40px; padding: 4px 10px; font-size: 0.65rem; font-weight: 600; width: 100%; margin-top: 4px; cursor: pointer; transition: background 0.2s; }
+        .btn-open { background: #0d6efd; color: white; border: none; border-radius: 40px; padding: 4px 10px; font-size: 0.65rem; font-weight: 600; width: 100%; margin-top: 4px; cursor: pointer; transition: background 0.2s; }
         .btn-open:hover { background: #0b5ed7; }
         .btn-open:disabled { background: #6c757d; cursor: not-allowed; }
         .project-count { grid-column: 1/-1; text-align: center; font-size: 0.75rem; color: #8a9aa8; padding: 8px; background: #f8fafc; border-radius: 12px; margin-top: 4px; }
@@ -295,14 +290,14 @@
         .post-card .post-media { max-width: 100%; border-radius: 12px; margin-bottom: 8px; max-height: 300px; object-fit: cover; }
         .post-card .post-actions { display: flex; gap: 12px; font-size: 0.85rem; color: #5d6f80; flex-wrap: wrap; align-items: center; }
         .post-card .post-actions span { cursor: pointer; transition: color 0.2s; display: flex; align-items: center; gap: 4px; }
-        .post-card .post-actions span:hover { color: #6c3ce0; }
+        .post-card .post-actions span:hover { color: #0d6efd; }
         .post-card .post-actions span.liked { color: #dc3545; }
         .post-card .post-actions .delete-post { color: #dc3545; cursor: pointer; }
         .post-card .post-actions .delete-post:hover { opacity: 0.7; }
 
         /* ===== PAYMENT METHOD CARDS ===== */
         .payment-method-card { background: white; border-radius: 16px; padding: 14px 16px; border: 2px solid #edf2f7; display: flex; align-items: center; gap: 14px; transition: all 0.3s; cursor: pointer; margin-bottom: 10px; }
-        .payment-method-card:hover { border-color: #6c3ce0; transform: translateY(-2px); box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+        .payment-method-card:hover { border-color: #0d6efd; transform: translateY(-2px); box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
         .payment-method-card .method-logo { width: 50px; height: 50px; border-radius: 12px; background: #f8fafc; display: flex; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0; border: 1px solid #e2e8f0; }
         .payment-method-card .method-logo img { width: 100%; height: 100%; object-fit: contain; padding: 6px; }
         .payment-method-card .method-logo i { font-size: 1.6rem; color: #8a9aa8; }
@@ -327,11 +322,11 @@
         .create-post-area textarea { border: none; resize: none; width: 100%; outline: none; font-size: 0.9rem; background: transparent; }
         .create-post-area .post-tools { display: flex; gap: 10px; margin-top: 8px; flex-wrap: wrap; align-items: center; }
         .create-post-area .post-tools button { background: none; border: none; color: #5d6f80; font-size: 0.85rem; cursor: pointer; transition: color 0.2s; }
-        .create-post-area .post-tools button:hover { color: #6c3ce0; }
+        .create-post-area .post-tools button:hover { color: #0d6efd; }
 
         /* ===== PROFILE ===== */
         .profile-header { background: white; border-radius: 20px; overflow: hidden; margin-bottom: 14px; border: 1px solid #edf2f7; transition: background 0.3s, border-color 0.3s; }
-        .profile-header .cover { height: 100px; background: linear-gradient(145deg, #24154f, #3a2285); position: relative; }
+        .profile-header .cover { height: 100px; background: linear-gradient(145deg, #0b2b4a, #1a3f5c); position: relative; }
         .profile-header .cover .edit-cover { position: absolute; right: 12px; bottom: 8px; background: rgba(0,0,0,0.5); color: white; border: none; border-radius: 40px; padding: 4px 12px; font-size: 0.7rem; cursor: pointer; }
         .profile-header .profile-info { padding: 0 16px 16px; text-align: center; margin-top: -40px; }
         .profile-header .profile-avatar { width: 80px; height: 80px; border-radius: 50%; background: #dce3ec; margin: 0 auto 6px; overflow: hidden; border: 3px solid white; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: #5d6f80; position: relative; cursor: pointer; }
@@ -353,7 +348,7 @@
 
         /* ===== PREMIUM CARD ===== */
         .premium-card { background: #fff3cd; border-radius: 16px; padding: 16px; border: 1px solid #ffc107; margin-bottom: 14px; }
-        .premium-card .premium-price { font-size: 1.2rem; font-weight: 700; color: #24154f; }
+        .premium-card .premium-price { font-size: 1.2rem; font-weight: 700; color: #0b2b4a; }
         .premium-card .btn-premium { background: #f9c74f; color: #1e2f3d; border: none; border-radius: 40px; padding: 10px 20px; font-weight: 700; width: 100%; transition: 0.2s; }
         .premium-card .btn-premium:hover { transform: scale(1.02); }
         .premium-card .btn-premium:disabled { opacity: 0.5; cursor: not-allowed; }
@@ -370,11 +365,11 @@
         .help-section .faq-item .answer { display: none; font-size: 0.8rem; color: #5d6f80; padding-top: 4px; }
         .help-section .faq-item .answer.show { display: block; }
         .help-section .contact-item { background: #f8fafc; border-radius: 12px; padding: 12px; margin-top: 6px; border: 1px solid #edf2f7; display: flex; align-items: center; gap: 12px; transition: background 0.3s, border-color 0.3s; }
-        .help-section .contact-item i { font-size: 1.4rem; width: 30px; color: #6c3ce0; }
+        .help-section .contact-item i { font-size: 1.4rem; width: 30px; color: #0d6efd; }
         .help-section .contact-item .contact-info { flex: 1; }
         .help-section .contact-item .contact-info .label { font-weight: 600; font-size: 0.8rem; }
         .help-section .contact-item .contact-info .value { font-size: 0.75rem; color: #5d6f80; }
-        .help-section .contact-item .btn-link-copy { background: none; border: none; color: #6c3ce0; cursor: pointer; font-size: 0.8rem; padding: 4px 8px; border-radius: 40px; transition: background 0.2s; }
+        .help-section .contact-item .btn-link-copy { background: none; border: none; color: #0d6efd; cursor: pointer; font-size: 0.8rem; padding: 4px 8px; border-radius: 40px; transition: background 0.2s; }
         .help-section .contact-item .btn-link-copy:hover { background: rgba(13,110,253,0.1); }
 
         /* ===== TICKET CARD ===== */
@@ -399,7 +394,7 @@
         }
 
         /* ===== SPLASH ===== */
-        #splashScreen { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #24154f; display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 99999; transition: opacity 0.2s ease; }
+        #splashScreen { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #0b2b4a; display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 99999; transition: opacity 0.2s ease; }
         #splashScreen.hidden { opacity: 0; pointer-events: none; }
         #splashScreen .splash-logo { font-size: 3rem; font-weight: 700; color: white; }
         #splashScreen .splash-logo i { color: #f9c74f; }
@@ -412,43 +407,43 @@
         .onboarding-card { background: white; border-radius: 30px; max-width: 400px; width: 100%; padding: 30px 24px 20px; text-align: center; position: relative; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
         .onboarding-card .slide-indicators { display: flex; justify-content: center; gap: 8px; margin: 12px 0; }
         .onboarding-card .slide-indicators .dot { width: 10px; height: 10px; border-radius: 50%; background: #dce3ec; transition: 0.3s; }
-        .onboarding-card .slide-indicators .dot.active { background: #6c3ce0; width: 24px; border-radius: 20px; }
-        .onboarding-card .onboarding-icon { font-size: 4rem; color: #6c3ce0; margin-bottom: 16px; }
+        .onboarding-card .slide-indicators .dot.active { background: #0d6efd; width: 24px; border-radius: 20px; }
+        .onboarding-card .onboarding-icon { font-size: 4rem; color: #0d6efd; margin-bottom: 16px; }
         .onboarding-card h5 { font-weight: 700; margin-bottom: 8px; }
         .onboarding-card p { color: #5d6f80; font-size: 0.9rem; margin-bottom: 12px; }
-        .onboarding-card .btn-next { background: #6c3ce0; color: white; border: none; border-radius: 60px; padding: 10px 20px; font-weight: 600; width: 100%; margin-top: 8px; transition: 0.2s; }
+        .onboarding-card .btn-next { background: #0d6efd; color: white; border: none; border-radius: 60px; padding: 10px 20px; font-weight: 600; width: 100%; margin-top: 8px; transition: 0.2s; }
         .onboarding-card .btn-next:hover { background: #0b5ed7; }
         .onboarding-card .btn-skip { background: none; border: none; color: #8a9aa8; font-size: 0.8rem; margin-top: 8px; cursor: pointer; }
         .onboarding-card .btn-skip:hover { text-decoration: underline; }
 
         /* ===== UPDATE BANNER ===== */
-        .update-banner { background: linear-gradient(145deg, #6c3ce0, #0b5ed7); color: white; border-radius: 16px; padding: 12px 16px; margin-bottom: 14px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; box-shadow: 0 4px 15px rgba(13,110,253,0.3); animation: pulse-glow 2s infinite; }
+        .update-banner { background: linear-gradient(145deg, #0d6efd, #0b5ed7); color: white; border-radius: 16px; padding: 12px 16px; margin-bottom: 14px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; box-shadow: 0 4px 15px rgba(13,110,253,0.3); animation: pulse-glow 2s infinite; }
         .update-banner .update-info { display: flex; align-items: center; gap: 10px; flex: 1; }
         .update-banner .update-info i { font-size: 1.8rem; }
         .update-banner .update-info .text { font-size: 0.85rem; }
         .update-banner .update-info .text strong { display: block; font-size: 1rem; }
-        .update-banner .update-btn { background: white; color: #6c3ce0; border: none; border-radius: 40px; padding: 6px 20px; font-weight: 700; font-size: 0.8rem; cursor: pointer; transition: 0.2s; white-space: nowrap; }
+        .update-banner .update-btn { background: white; color: #0d6efd; border: none; border-radius: 40px; padding: 6px 20px; font-weight: 700; font-size: 0.8rem; cursor: pointer; transition: 0.2s; white-space: nowrap; }
         .update-banner .update-btn:hover { transform: scale(1.05); background: #f8f9fa; }
         @keyframes pulse-glow { 0% { box-shadow: 0 4px 15px rgba(13,110,253,0.3); } 50% { box-shadow: 0 4px 25px rgba(13,110,253,0.6); } 100% { box-shadow: 0 4px 15px rgba(13,110,253,0.3); } }
 
         /* ===== POLICY SECTION ===== */
         .policy-section { margin-top: 18px; padding: 12px; background: #f8fafc; border-radius: 16px; border: 1px solid #e2e8f0; font-size: 0.75rem; color: #5d6f80; text-align: left; max-height: 150px; overflow-y: auto; transition: background 0.3s, border-color 0.3s, color 0.3s; }
-        body.dark-mode .policy-section { background: #0f0b24; border-color: #3a2f6b; color: #8a9aa8; }
-        .policy-section h6 { font-weight: 700; color: #24154f; margin-bottom: 4px; font-size: 0.8rem; }
+        body.dark-mode .policy-section { background: #0f1a2e; border-color: #2a3a5e; color: #8a9aa8; }
+        .policy-section h6 { font-weight: 700; color: #0b2b4a; margin-bottom: 4px; font-size: 0.8rem; }
         body.dark-mode .policy-section h6 { color: #ffffff; }
         .policy-section ul { padding-left: 18px; margin-bottom: 4px; }
         .policy-section ul li { margin-bottom: 2px; }
 
         /* ===== AUTO LOGIN TIMER ===== */
-        .auto-login-timer { font-size: 0.85rem; font-weight: 600; color: #6c3ce0; margin-top: 8px; }
+        .auto-login-timer { font-size: 0.85rem; font-weight: 600; color: #0d6efd; margin-top: 8px; }
 
         /* ===== TASK SELECT BUTTON ===== */
         .task-select-btn { padding: 14px 10px; border-radius: 16px; border: 3px solid #e2e8f0; background: white; text-align: center; cursor: pointer; transition: all 0.2s; font-weight: 600; font-size: 0.95rem; color: #2d3f4f; display: flex; align-items: center; justify-content: center; gap: 8px; }
         .task-select-btn i { display: none; }
-        .task-select-btn.selected { border-color: #6c3ce0; background: #e8f0fe; color: #6c3ce0; }
+        .task-select-btn.selected { border-color: #0d6efd; background: #e8f0fe; color: #0d6efd; }
         .task-select-btn.selected i { display: inline; }
-        body.dark-mode .task-select-btn { background: #0f0b24; border-color: #3a2f6b; color: #ffffff; }
-        body.dark-mode .task-select-btn.selected { background: #2a2160; border-color: #6c3ce0; color: #6c3ce0; }
+        body.dark-mode .task-select-btn { background: #0f1a2e; border-color: #2a3a5e; color: #ffffff; }
+        body.dark-mode .task-select-btn.selected { background: #1a2a4e; border-color: #0d6efd; color: #0d6efd; }
 
         /* ===== SUBMISSION ===== */
         .submission-task-card { background: #f8fafc; border-radius: 14px; padding: 14px; margin-bottom: 12px; border: 1px solid #edf2f7; transition: background 0.3s, border-color 0.3s; }
@@ -456,7 +451,7 @@
         .submission-task-card .task-instruction { font-size: 0.8rem; color: #5d6f80; margin-bottom: 8px; }
         .submission-task-card .screenshot-label { font-size: 0.7rem; font-weight: 600; color: #5d6f80; margin-top: 8px; }
         .submission-task-card .file-input-wrap { border: 2px dashed #dce3ec; border-radius: 12px; padding: 12px; text-align: center; cursor: pointer; transition: border-color 0.2s; margin-top: 4px; }
-        .submission-task-card .file-input-wrap:hover { border-color: #6c3ce0; }
+        .submission-task-card .file-input-wrap:hover { border-color: #0d6efd; }
         .submission-task-card .file-input-wrap .preview-img { max-width: 100%; max-height: 150px; border-radius: 8px; margin-top: 6px; }
         .submission-card { background: white; border-radius: 18px; padding: 16px; margin-bottom: 14px; border: 1px solid #edf2f7; transition: background 0.3s, border-color 0.3s; }
         .submission-status-badge { display: inline-block; padding: 2px 14px; border-radius: 40px; font-size: 0.7rem; font-weight: 600; }
@@ -471,13 +466,13 @@
 
         /* ===== THUMBNAIL UPLOAD ===== */
         .thumbnail-upload-wrap { border: 2px dashed #dce3ec; border-radius: 12px; padding: 20px; text-align: center; cursor: pointer; transition: border-color 0.2s; }
-        .thumbnail-upload-wrap:hover { border-color: #6c3ce0; }
+        .thumbnail-upload-wrap:hover { border-color: #0d6efd; }
         .thumbnail-upload-wrap .preview-img { max-width: 100%; max-height: 150px; border-radius: 8px; margin-top: 6px; }
 
         /* ===== SCREENSHOT COUNT SELECTOR ===== */
         .screenshot-count-selector { display: flex; gap: 8px; flex-wrap: wrap; }
         .screenshot-count-selector .count-btn { padding: 6px 16px; border-radius: 40px; border: 2px solid #e2e8f0; background: white; cursor: pointer; transition: 0.2s; font-weight: 600; font-size: 0.8rem; }
-        .screenshot-count-selector .count-btn.active { border-color: #6c3ce0; background: #e8f0fe; color: #6c3ce0; }
+        .screenshot-count-selector .count-btn.active { border-color: #0d6efd; background: #e8f0fe; color: #0d6efd; }
 
         /* ===== PROJECT STAT GRID ===== */
         .project-stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-bottom: 10px; }
@@ -497,7 +492,7 @@
         .submission-participant-card .submission-header .user-info { display: flex; align-items: center; gap: 10px; }
         .submission-participant-card .submission-header .user-info .name { font-weight: 600; font-size: 0.9rem; }
         .submission-participant-card .submission-header .user-info .username { font-size: 0.7rem; color: #8a9aa8; }
-        .submission-participant-card .submission-details-toggle { color: #6c3ce0; cursor: pointer; font-size: 0.8rem; }
+        .submission-participant-card .submission-details-toggle { color: #0d6efd; cursor: pointer; font-size: 0.8rem; }
         .submission-participant-card .submission-details { display: none; margin-top: 10px; padding-top: 10px; border-top: 1px solid #edf2f7; }
         .submission-participant-card .submission-details.show { display: block; }
         .submission-participant-card .submission-details .task-detail { background: white; border-radius: 10px; padding: 10px; margin-bottom: 6px; border: 1px solid #edf2f7; }
@@ -521,8 +516,8 @@
         .ad-card .ad-image { width: 100%; aspect-ratio: 16/9; background: #dce3ec; display: flex; align-items: center; justify-content: center; font-size: 2rem; color: #5d6f80; object-fit: cover; overflow: hidden; }
         .ad-card .ad-image img { width: 100%; height: 100%; object-fit: cover; }
         .ad-card .ad-body { padding: 12px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
-        .ad-card .ad-title { font-weight: 700; font-size: 0.85rem; color: #24154f; margin-bottom: 4px; }
-        .ad-card .ad-link { font-size: 0.7rem; color: #6c3ce0; font-weight: 600; text-decoration: none; }
+        .ad-card .ad-title { font-weight: 700; font-size: 0.85rem; color: #0b2b4a; margin-bottom: 4px; }
+        .ad-card .ad-link { font-size: 0.7rem; color: #0d6efd; font-weight: 600; text-decoration: none; }
         .ad-card .ad-link:hover { text-decoration: underline; }
         .ad-card .ad-badge { position: absolute; top: 8px; right: 8px; background: rgba(0,0,0,0.6); color: white; font-size: 0.6rem; padding: 2px 10px; border-radius: 40px; backdrop-filter: blur(4px); }
         .ad-feed-card { background: white; border-radius: 18px; overflow: hidden; border: 1px solid #edf2f7; margin-bottom: 12px; cursor: pointer; transition: transform 0.15s; display: flex; align-items: center; gap: 12px; padding: 12px; }
@@ -530,13 +525,13 @@
         .ad-feed-card .ad-feed-image { width: 80px; height: 80px; border-radius: 12px; background: #dce3ec; flex-shrink: 0; overflow: hidden; }
         .ad-feed-card .ad-feed-image img { width: 100%; height: 100%; object-fit: cover; }
         .ad-feed-card .ad-feed-body { flex: 1; }
-        .ad-feed-card .ad-feed-title { font-weight: 600; font-size: 0.9rem; color: #24154f; }
-        .ad-feed-card .ad-feed-link { font-size: 0.75rem; color: #6c3ce0; }
+        .ad-feed-card .ad-feed-title { font-weight: 600; font-size: 0.9rem; color: #0b2b4a; }
+        .ad-feed-card .ad-feed-link { font-size: 0.75rem; color: #0d6efd; }
         .profile-ad-banner { background: white; border-radius: 16px; overflow: hidden; border: 1px solid #edf2f7; margin-bottom: 14px; cursor: pointer; transition: transform 0.15s; }
         .profile-ad-banner:hover { transform: scale(1.01); }
         .profile-ad-banner .ad-banner-image { width: 100%; height: 80px; background: #dce3ec; display: flex; align-items: center; justify-content: center; overflow: hidden; }
         .profile-ad-banner .ad-banner-image img { width: 100%; height: 100%; object-fit: cover; }
-        .profile-ad-banner .ad-banner-text { padding: 8px 16px; font-weight: 600; font-size: 0.85rem; color: #24154f; }
+        .profile-ad-banner .ad-banner-text { padding: 8px 16px; font-weight: 600; font-size: 0.85rem; color: #0b2b4a; }
 
         /* ===== FORCE UPDATE MODAL ===== */
         #forceUpdateModal { z-index: 99999; }
@@ -579,7 +574,7 @@
         /* ===== BIG LINK/TITLE BOX ===== */
         .big-link-box {
             background: #e8f0fe;
-            border: 2px solid #6c3ce0;
+            border: 2px solid #0d6efd;
             border-radius: 12px;
             padding: 14px;
             margin: 10px 0;
@@ -588,27 +583,27 @@
         }
         .big-link-box .big-link-label {
             font-weight: 700;
-            color: #24154f;
+            color: #0b2b4a;
             margin-bottom: 8px;
             font-size: 0.9rem;
         }
         .big-link-box .big-link-url {
             font-weight: 700;
             text-decoration: underline;
-            color: #6c3ce0;
+            color: #0d6efd;
             font-size: 1.05rem;
             display: block;
             margin-bottom: 8px;
         }
         .big-link-box .big-link-title {
             font-weight: 700;
-            color: #24154f;
+            color: #0b2b4a;
             font-size: 1.05rem;
             display: block;
             margin-bottom: 8px;
         }
         .big-link-box .copy-btn {
-            background: #6c3ce0;
+            background: #0d6efd;
             color: #fff;
             border: none;
             border-radius: 40px;
@@ -621,232 +616,9 @@
             background: #0b5ed7;
         }
 
-        /* ===== WEBSITE LAYOUT & PALETTE (Midnight Violet + Mint) ===== */
-        :root { --bs-primary:#6c3ce0; --bs-primary-rgb:108,60,224; --mint:#2ee6a6; }
-        .btn-primary { --bs-btn-bg:#6c3ce0; --bs-btn-border-color:#6c3ce0; --bs-btn-hover-bg:#5a2fc4; --bs-btn-hover-border-color:#5a2fc4; --bs-btn-active-bg:#5a2fc4; --bs-btn-active-border-color:#5a2fc4; }
-        .btn-outline-primary { --bs-btn-color:#6c3ce0; --bs-btn-border-color:#6c3ce0; --bs-btn-hover-bg:#6c3ce0; --bs-btn-hover-border-color:#6c3ce0; }
-        .bg-primary { background-color:#6c3ce0 !important; } .text-primary { color:#6c3ce0 !important; }
-        body { padding-bottom:0 !important; }
-        .app-bar { background:linear-gradient(120deg,#24154f 0%,#3a2285 60%,#4b2aa8 100%); box-shadow:0 2px 18px rgba(36,21,79,.35); }
-        .app-bar .top-row { max-width:1280px; margin:0 auto; }
-        .app-bar .menu-icon { width:38px; height:38px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; transition:background .2s; }
-        .app-bar .menu-icon:hover { background:rgba(255,255,255,.16); }
-        #userApp .container { max-width:1280px; padding-bottom:48px; }
-        .bottom-nav.web-nav { position:static !important; display:flex !important; width:auto !important; background:transparent !important; border:0 !important; box-shadow:none !important; padding:0 !important; gap:4px; margin-left:18px; }
-        .web-nav .nav-item { flex-direction:row !important; gap:7px; padding:8px 15px !important; border-radius:40px; font-size:.88rem !important; color:#d8ccff !important; cursor:pointer; align-items:center; transition:background .2s,color .2s; }
-        .web-nav .nav-item:hover { background:rgba(255,255,255,.12); }
-        .web-nav .nav-item.active { background:rgba(46,230,166,.18) !important; color:#2ee6a6 !important; }
-        .web-nav .nav-item i { font-size:.95rem !important; margin:0 !important; }
-        .side-menu { background:linear-gradient(180deg,#24154f,#170d38); }
-        .side-menu .menu-item:hover, .side-menu .menu-item.active { border-left-color:#2ee6a6; }
-        .project-grid { grid-template-columns:repeat(auto-fill,minmax(250px,1fr)) !important; gap:18px !important; }
-        .modal-content { max-width:640px; }
-        @media (max-width: 991px) { .bottom-nav.web-nav { display:none !important; } .project-grid { grid-template-columns:repeat(2,1fr) !important; gap:10px !important; } }
-        @media (max-width: 480px) { .project-grid { grid-template-columns:1fr !important; } }
-
-        /* ===== LANDING + WEBSITE CHROME ===== */
-        body { font-family:'Hind Siliguri','Segoe UI',system-ui,sans-serif; }
-        h1,h2,h3,h4,.lp-brand,.lp-btn { font-family:'Anek Bangla','Hind Siliguri',sans-serif; }
-        #splashScreen { display:none !important; }
-        body.on-landing { background:#fff !important; color:#130f2a !important; }
-        .lp-wrap { max-width:1180px; margin:0 auto; padding:0 20px; } .lp-narrow { max-width:780px; }
-        .lp-head { position:sticky; top:0; z-index:200; background:rgba(255,255,255,.92); backdrop-filter:blur(10px); border-bottom:1px solid #ebe7f8; }
-        .lp-bar { display:flex; align-items:center; gap:24px; height:68px; }
-        .lp-brand { display:flex; align-items:center; gap:10px; font-weight:800; font-size:1.25rem; color:#24154f; cursor:pointer; text-decoration:none; }
-        .lp-mark { width:34px; height:34px; border-radius:10px; background:linear-gradient(135deg,#6c3ce0,#2ee6a6); color:#fff; display:inline-flex; align-items:center; justify-content:center; font-size:.9rem; }
-        .lp-links { display:flex; gap:22px; margin-left:auto; } .lp-links a { color:#4b4670; text-decoration:none; font-size:.95rem; } .lp-links a:hover { color:#6c3ce0; }
-        .lp-actions { display:flex; gap:10px; }
-        .lp-btn { border:0; border-radius:10px; padding:10px 20px; font-weight:700; cursor:pointer; transition:transform .15s, box-shadow .15s; }
-        .lp-btn.solid { background:#6c3ce0; color:#fff; box-shadow:0 6px 18px rgba(108,60,224,.3); } .lp-btn.solid:hover { transform:translateY(-1px); }
-        .lp-btn.ghost { background:transparent; color:#24154f; } .lp-btn.outline { background:#fff; color:#6c3ce0; border:1.5px solid #6c3ce0; }
-        .lp-btn.big { padding:14px 28px; font-size:1.05rem; }
-        .lp-hero { background:radial-gradient(900px 420px at 85% -10%,rgba(108,60,224,.16),transparent 60%),#fff; padding:64px 0 56px; }
-        .lp-hero-grid { display:grid; grid-template-columns:1.1fr .9fr; gap:48px; align-items:center; }
-        .lp-pill { display:inline-flex; gap:8px; align-items:center; background:#f1ecff; color:#5a2fc4; padding:6px 14px; border-radius:40px; font-size:.85rem; font-weight:600; } .lp-pill i { font-size:.5rem; color:#2ee6a6; }
-        .lp-hero h1 { font-size:2.7rem; line-height:1.28; font-weight:800; color:#1a1040; margin:18px 0 14px; }
-        .lp-hero p { font-size:1.1rem; color:#55507a; max-width:560px; line-height:1.8; }
-        .lp-cta { display:flex; gap:12px; flex-wrap:wrap; margin:26px 0 18px; }
-        .lp-trust { display:flex; gap:18px; flex-wrap:wrap; color:#4b4670; font-size:.9rem; } .lp-trust i { color:#14b883; margin-right:6px; }
-        .lp-board { background:#1a1040; border-radius:22px; padding:20px; color:#fff; box-shadow:0 30px 60px rgba(36,21,79,.35); transform:rotate(1.2deg); }
-        .lp-board-top { display:flex; justify-content:space-between; margin-bottom:12px; } .lp-board-top span { background:rgba(46,230,166,.18); color:#2ee6a6; border-radius:20px; padding:2px 12px; font-size:.75rem; align-self:center; }
-        .lp-task { display:flex; align-items:center; gap:12px; background:rgba(255,255,255,.07); border-radius:14px; padding:12px; margin-bottom:10px; }
-        .lp-task > i { width:42px; height:42px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0; }
-        .lp-task > div { flex:1; min-width:0; } .lp-task b { display:block; font-size:.95rem; } .lp-task em { display:block; font-style:normal; font-size:.75rem; color:#b7aee0; margin-bottom:6px; }
-        .lp-task strong { color:#2ee6a6; white-space:nowrap; } .lp-task small { font-size:.7rem; color:#b7aee0; }
-        .lp-bar-p { height:5px; background:rgba(255,255,255,.12); border-radius:5px; overflow:hidden; } .lp-bar-p span { display:block; height:100%; background:#2ee6a6; border-radius:5px; }
-        .lp-wallet { margin-top:6px; padding:12px; border-radius:14px; background:linear-gradient(120deg,#6c3ce0,#8a5cff); display:flex; flex-direction:column; font-size:.85rem; } .lp-wallet b { font-size:1rem; }
-        .lp-stats { background:#24154f; color:#fff; padding:34px 0; } .lp-stats-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; text-align:center; }
-        .lp-stats b { display:block; font-family:'Anek Bangla',sans-serif; font-size:2.3rem; color:#2ee6a6; } .lp-stats span { color:#cfc6f5; font-size:.95rem; }
-        .lp-sec { padding:72px 0; } .lp-sec.soft { background:#f6f3ff; }
-        .lp-h2 { font-size:2rem; font-weight:800; color:#1a1040; margin:0 0 32px; }
-        .lp-two { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
-        .lp-panel { background:#fff; border:1px solid #e7e1fa; border-radius:20px; padding:28px; } .lp-panel.alt { background:#f6f3ff; } .lp-panel.prem { background:#24154f; color:#fff; border:0; }
-        .lp-panel h3 { font-size:1.25rem; font-weight:800; margin-bottom:18px; } .lp-panel h3 i { margin-right:10px; color:#6c3ce0; } .lp-panel.prem h3 i { color:#2ee6a6; }
-        .lp-panel ol { list-style:none; counter-reset:s; padding:0; margin:0; } .lp-panel li { counter-increment:s; position:relative; padding:0 0 16px 46px; }
-        .lp-panel ol li::before { content:counter(s); position:absolute; left:0; top:0; width:32px; height:32px; border-radius:50%; background:#6c3ce0; color:#fff; font-weight:700; display:flex; align-items:center; justify-content:center; }
-        .lp-panel li b { display:block; } .lp-panel li span { color:#6a6590; font-size:.92rem; }
-        .lp-ticks { list-style:none; padding:0; margin:0 0 20px; } .lp-ticks li { padding:0 0 10px 28px; position:relative; } .lp-ticks li::before { content:"\f00c"; font-family:"Font Awesome 6 Free"; font-weight:900; position:absolute; left:0; color:#14b883; }
-        .lp-cats { display:flex; flex-wrap:wrap; gap:12px; margin-bottom:34px; } .lp-cats span { background:#fff; border:1px solid #e0d8fa; border-radius:40px; padding:10px 20px; font-weight:600; } .lp-cats i { margin-right:8px; color:#6c3ce0; }
-        .lp-feat { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; } .lp-feat > div { background:#fff; border-radius:18px; padding:24px; }
-        .lp-feat i { font-size:1.4rem; color:#6c3ce0; margin-bottom:12px; } .lp-feat h4 { font-weight:800; font-size:1.1rem; } .lp-feat p { color:#6a6590; margin:0; font-size:.93rem; }
-        .lp-reviews { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; } .lp-rv { background:#fff; border-radius:18px; padding:22px; border:1px solid #e7e1fa; }
-        .lp-rv .st { color:#f5b301; margin-bottom:8px; } .lp-rv p { color:#3b3660; line-height:1.75; margin-bottom:12px; } .lp-rv b { font-size:.9rem; color:#5a2fc4; }
-        .lp-narrow details { border-bottom:1px solid #e7e1fa; padding:16px 0; } .lp-narrow summary { cursor:pointer; font-weight:700; font-size:1.05rem; } .lp-narrow details p { margin:10px 0 0; color:#55507a; }
-        .lp-final { background:linear-gradient(120deg,#24154f,#4b2aa8); color:#fff; text-align:center; padding:64px 0; } .lp-final h2 { font-weight:800; font-size:2.1rem; } .lp-final p { color:#d8ccff; margin-bottom:22px; }
-        .lp-foot { background:#130f2a; color:#b7aee0; padding:22px 0; font-size:.9rem; } .lp-foot .lp-wrap { display:flex; justify-content:space-between; } .lp-foot a { color:#b7aee0; cursor:pointer; }
-        #authPage { max-width:980px !important; flex-direction:row; gap:0; padding:20px; }
-        .auth-aside { flex:1; align-self:stretch; background:linear-gradient(160deg,#24154f,#4b2aa8); color:#fff; border-radius:24px 0 0 24px; padding:36px 30px; display:flex; flex-direction:column; justify-content:center; }
-        .auth-aside h2 { font-size:1.9rem; font-weight:800; margin:26px 0 20px; } .auth-aside ul { list-style:none; padding:0; margin:0; } .auth-aside li { margin-bottom:14px; display:flex; gap:12px; align-items:center; } .auth-aside li i { color:#2ee6a6; width:20px; }
-        .auth-back { color:#d8ccff; cursor:pointer; text-decoration:none; font-size:.9rem; }
-        #authPage .auth-card { flex:1; border-radius:0 24px 24px 0 !important; }
-        .web-user { position:relative; display:inline-flex; align-items:center; gap:6px; cursor:pointer; }
-        .web-av { width:32px; height:32px; border-radius:50%; background:rgba(255,255,255,.2); display:inline-flex; align-items:center; justify-content:center; overflow:hidden; } .web-av img { width:100%; height:100%; object-fit:cover; }
-        .web-dd { display:none; position:absolute; right:0; top:42px; min-width:200px; background:#fff; color:#24154f; border-radius:14px; box-shadow:0 14px 40px rgba(0,0,0,.25); padding:6px; z-index:500; }
-        .web-dd.open { display:block; } .web-dd a { display:flex; gap:12px; align-items:center; padding:10px 14px; border-radius:10px; font-size:.9rem; cursor:pointer; } .web-dd a:hover { background:#f1ecff; } .web-dd a i { width:16px; color:#6c3ce0; font-size:.9rem !important; margin:0 !important; }
-        body.dark-mode .web-dd { background:#1d1740; color:#fff; } body.dark-mode .web-dd a:hover { background:#2a2160; }
-        @media (min-width:992px) { .app-bar .menu-icon { display:none; } }
-        @media (max-width:900px) { .lp-hero-grid,.lp-two,.lp-feat,.lp-reviews { grid-template-columns:1fr; } .lp-links { display:none; } .lp-actions { margin-left:auto; } .lp-hero h1 { font-size:2rem; } .lp-stats-grid { grid-template-columns:repeat(2,1fr); } .lp-board { transform:none; } .auth-aside { display:none; } #authPage .auth-card { border-radius:24px !important; } }
-        #userApp { padding-bottom:0 !important; }
-
-        /* ===== DARK LANDING ===== */
-        .lp-user { display:none; } .has-session .lp-user { display:inline-flex; } .has-session .lp-guest { display:none !important; }
-        body.on-landing { background:#0a0a1c !important; color:#fff !important; }
-        .lp-head { background:rgba(10,10,28,.88); border-bottom:1px solid #1e2048; } .lp-brand { color:#fff; } .lp-links a { color:#a9abd6; } .lp-links a:hover { color:#fff; }
-        .lp-btn.ghost { color:#fff; } .lp-btn.outline { background:#131431; color:#fff; border:1px solid #2b2e63; }
-        .lp-btn.solid { background:linear-gradient(135deg,#7c4dff,#3b82f6); box-shadow:0 8px 24px rgba(124,77,255,.35); }
-        .lp-hero { background:radial-gradient(820px 460px at 15% -10%,rgba(124,77,255,.38),transparent 62%),radial-gradient(700px 400px at 100% 30%,rgba(59,130,246,.18),transparent 60%),#0a0a1c; }
-        .lp-hero h1,.lp-h2,.lp-panel h3,.lp-feat h4 { color:#fff; } .lp-hero p,.lp-trust { color:#a9abd6; } .lp-pill { background:#1a1b40; color:#c9b8ff; }
-        .lp-stats { background:transparent; padding:8px 0 28px; } .lp-stats-grid { gap:16px; text-align:left; }
-        .lp-stats-grid > div { background:#131431; border:1px solid #232650; border-radius:20px; padding:22px; }
-        .lp-stats b { color:#fff; font-size:2.2rem; } .lp-stats-grid > div:last-child b,.lp-stats-grid > div:nth-child(3) b { color:#fbbf24; } .lp-stats span { color:#9a9cc4; }
-        .lp-stats-grid > div:first-child span::before { content:""; display:inline-block; width:9px; height:9px; border-radius:50%; background:#22c55e; margin-right:8px; }
-        .lp-sec { background:#0a0a1c; } .lp-sec.soft { background:#0e0e26; }
-        .lp-panel { background:#131431; border-color:#232650; color:#fff; } .lp-panel.alt { background:#10112c; } .lp-panel li span { color:#9a9cc4; }
-        .lp-cats span { background:#131431; border-color:#232650; color:#fff; } .lp-feat > div { background:#131431; border:1px solid #232650; } .lp-feat p { color:#9a9cc4; }
-        .lp-rv { background:#131431; border-color:#232650; } .lp-rv p { color:#c9cbe8; } .lp-rv b { color:#a78bfa; }
-        .lp-narrow details { border-color:#232650; } .lp-narrow details p { color:#9a9cc4; }
-        .lp-final { background:linear-gradient(120deg,#1b0f4a,#2d1b8f); }
-        @media (max-width:900px) { .lp-stats-grid { grid-template-columns:repeat(2,1fr); } }
-
         .lb-row { display:flex; align-items:center; gap:12px; padding:10px 6px; border-bottom:1px solid #eef0f4; } .lb-row.me { background:#f1ecff; border-radius:10px; }
         .lb-rank { width:28px; height:28px; border-radius:50%; background:#6c3ce0; color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:.8rem; flex-shrink:0; }
         .lb-row > div { flex:1; min-width:0; } .lb-row small { display:block; color:#8a9aa8; } #infoFaq details { border-bottom:1px solid #eef0f4; padding:8px 0; } #infoFaq summary { cursor:pointer; font-weight:600; font-size:.9rem; } #infoFaq p { margin:6px 0 0; font-size:.85rem; color:#6b7280; }
-
-        /* ===== DASHBOARD: microjob-style light surface, grouped sidebar, compact jobs ===== */
-        body:not(.on-landing):not(.dark-mode) { background:#f3f4f6 !important; }
-        .menu-sec { padding:14px 20px 4px; font-weight:700; font-size:.78rem; opacity:.75; }
-        .theme-row { display:flex; gap:8px; padding:6px 16px 24px; } .theme-btn { flex:1; border:1px solid rgba(128,128,160,.4); background:transparent; color:inherit; border-radius:10px; padding:8px 4px; font-size:.78rem; cursor:pointer; } .theme-btn.active { background:#14b883; color:#fff; border-color:#14b883; }
-        .side-menu .menu-item i { width:20px; text-align:center; }
-        @media (min-width:992px) {
-            .side-menu { left:0 !important; top:64px; height:calc(100vh - 64px); width:260px; z-index:90; background:#f8f9fb; color:#374151; border-right:1px solid #e5e7eb; padding:8px 0 20px; }
-            .side-menu .menu-header, .side-menu-overlay { display:none !important; }
-            .side-menu .menu-item:hover { background:#eceef2; } .side-menu .menu-item.active { color:#0f9d6e; font-weight:600; border-left-color:#14b883; background:#e8f7f1; }
-            .side-menu .user-info { border-bottom:1px solid #e5e7eb; } .side-menu .user-info .name { color:#111827; } .side-menu .user-info .username, .side-menu .coins { color:#6b7280; }
-            #userApp .container { margin-left:260px; width:calc(100% - 260px); max-width:none; padding:20px 28px 48px; }
-            .web-nav { display:none !important; }
-            body.dark-mode .side-menu { background:#171234; color:#e5e1ff; border-color:#3a2f6b; } body.dark-mode .side-menu .menu-item:hover { background:#241d4d; } body.dark-mode .side-menu .menu-item.active { background:#1f2a3d; color:#2ee6a6; }
-            body.dark-mode .side-menu .user-info .name { color:#fff; }
-        }
-        .project-grid { grid-template-columns:repeat(auto-fill,minmax(360px,1fr)) !important; gap:12px !important; } .project-count { grid-column:1/-1; }
-        .job-row { display:flex; align-items:center; gap:12px; background:#fff; border:1px solid #e5e7eb; border-radius:14px; padding:12px 14px; cursor:pointer; transition:border-color .15s, box-shadow .15s; }
-        .job-row:hover { border-color:#14b883; box-shadow:0 4px 16px rgba(20,184,131,.12); }
-        .job-ic { width:38px; height:38px; border-radius:10px; display:flex; align-items:center; justify-content:center; color:#fff; font-size:1rem; flex-shrink:0; }
-        .job-main { flex:1; min-width:0; } .job-title { font-weight:600; font-size:.95rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-        .job-chips { display:flex; gap:6px; flex-wrap:wrap; margin:4px 0; } .job-chips span { background:#f1f5f9; color:#475569; border-radius:20px; padding:1px 9px; font-size:.72rem; } .job-chips .plat { background:#ede9fe; color:#5a2fc4; }
-        .job-meta { display:flex; gap:12px; font-size:.78rem; color:#6b7280; } .job-meta i { margin-right:4px; color:#f59e0b; } .job-meta span:nth-child(2) i { color:#6c3ce0; }
-        .job-bar { height:4px; background:#e5e7eb; border-radius:4px; margin-top:6px; overflow:hidden; } .job-bar span { display:block; height:100%; background:#14b883; }
-        .job-join { border:0; border-radius:10px; background:#14b883; color:#fff; font-weight:600; padding:8px 16px; font-size:.85rem; flex-shrink:0; } .job-join:disabled { background:#9ca3af; }
-        body.dark-mode .job-row { background:#1d1740; border-color:#3a2f6b; color:#fff; } body.dark-mode .job-chips span { background:#2a2160; color:#cfc6f5; } body.dark-mode .job-bar { background:#3a2f6b; }
-        @media (max-width:480px) { .project-grid { grid-template-columns:1fr !important; } }
-        /* ===== LANDING extras ===== */
-        .lp-marquee { overflow:hidden; border-top:1px solid #1e2048; border-bottom:1px solid #1e2048; background:#0d0d24; }
-        .lp-track { display:flex; gap:40px; width:max-content; padding:14px 0; animation:lpScroll 32s linear infinite; } .lp-track span { color:#a9abd6; font-weight:600; white-space:nowrap; } .lp-track i { margin-right:8px; color:#8b6cff; }
-        @keyframes lpScroll { to { transform:translateX(-50%); } }
-        .lp-board { animation:lpFloat 6s ease-in-out infinite; } @keyframes lpFloat { 50% { transform:rotate(1.2deg) translateY(-8px); } }
-        @media (prefers-reduced-motion:reduce) { .lp-track,.lp-board { animation:none; } }
-        .lp-calc { display:grid; grid-template-columns:1.2fr .8fr; gap:24px; background:#131431; border:1px solid #232650; border-radius:22px; padding:28px; }
-        .lp-calc label { display:block; margin:14px 0 6px; color:#c9cbe8; } .lp-calc label b { color:#fff; } .lp-calc input[type=range] { width:100%; accent-color:#7c4dff; }
-        .lp-calc-out { background:linear-gradient(150deg,#2d1b8f,#4b2aa8); border-radius:18px; padding:22px; display:flex; flex-direction:column; } .lp-calc-out span { color:#d8ccff; }
-        .lp-calc-out b { font-family:'Anek Bangla',sans-serif; font-size:2.2rem; color:#fbbf24; line-height:1.2; } .lp-calc-out small { color:#d8ccff; margin-bottom:8px; } .lp-calc-out em { font-style:normal; font-size:.78rem; color:#b7aee0; margin-top:auto; }
-        .lp-steps { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; } .lp-steps > div { background:#131431; border:1px solid #232650; border-radius:18px; padding:24px; }
-        .lp-steps i { font-size:1.5rem; color:#2ee6a6; margin-bottom:12px; } .lp-steps h4 { color:#fff; font-weight:800; font-size:1.1rem; } .lp-steps p { color:#9a9cc4; margin:0; font-size:.93rem; }
-        @media (max-width:900px) { .lp-calc,.lp-steps { grid-template-columns:1fr; } }
-
-        /* ===== F24 WEBSITE EXPERIENCE UPDATE ===== */
-        #landingPage { min-height:100vh; overflow:hidden; }
-        .lp-head { position:sticky; top:0; z-index:1200; backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px); }
-        .lp-bar { min-height:74px; }
-        .lp-links a { transition:color .2s ease; }
-        .lp-links a:hover { color:#2ee6a6; }
-        .lp-hero { position:relative; isolation:isolate; }
-        .lp-hero:before { content:""; position:absolute; width:520px; height:520px; right:-160px; top:-220px; border-radius:50%; background:radial-gradient(circle,rgba(108,60,224,.28),transparent 68%); z-index:-1; pointer-events:none; }
-        .lp-hero-grid { padding-top:76px !important; padding-bottom:76px !important; }
-        .lp-hero h1 { letter-spacing:-1.1px; }
-        .lp-board { box-shadow:0 28px 80px rgba(0,0,0,.34),0 0 0 1px rgba(143,125,255,.14); }
-        .lp-live-section { padding:72px 0; background:linear-gradient(180deg,#f8f9ff 0%,#fff 100%); color:#17152b; }
-        .lp-live-head { display:flex; align-items:flex-end; justify-content:space-between; gap:24px; margin-bottom:26px; }
-        .lp-live-head .lp-h2 { margin:8px 0 7px; text-align:left; color:#17152b; }
-        .lp-live-head p { color:#73758b; margin:0; max-width:650px; }
-        .lp-live-kicker { display:inline-flex; align-items:center; gap:8px; color:#6540c8; font-size:.75rem; font-weight:800; letter-spacing:1.2px; }
-        .lp-live-kicker i { color:#14a879; }
-        .lp-live-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
-        .lp-live-job { display:flex; align-items:center; gap:13px; min-width:0; padding:15px 16px; border:1px solid #e8e8f1; border-radius:16px; background:#fff; box-shadow:0 5px 18px rgba(26,20,66,.045); transition:transform .2s,border-color .2s,box-shadow .2s; }
-        .lp-live-job:hover { transform:translateY(-3px); border-color:#b9a7f5; box-shadow:0 12px 28px rgba(72,45,150,.10); }
-        .lp-live-thumb { width:48px; height:48px; flex:0 0 48px; border-radius:12px; object-fit:cover; background:#f0edfb; }
-        .lp-live-thumb-fallback { display:flex; align-items:center; justify-content:center; color:#fff; font-size:1.1rem; }
-        .lp-live-main { min-width:0; flex:1; }
-        .lp-live-title { display:block; color:#24213b; font-weight:800; font-size:.94rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-        .lp-live-tags { display:flex; align-items:center; gap:5px; flex-wrap:wrap; margin-top:5px; }
-        .lp-live-tags span { display:inline-flex; align-items:center; padding:3px 8px; border-radius:30px; background:#f2f0fb; color:#62518e; font-size:.68rem; font-weight:700; }
-        .lp-live-tags .lp-platform { background:#e8f7f1; color:#087d59; }
-        .lp-live-meta { display:flex; gap:12px; flex-wrap:wrap; margin-top:7px; color:#77788c; font-size:.72rem; }
-        .lp-live-meta strong { color:#1b9a70; font-weight:800; }
-        .lp-live-join { flex:0 0 auto; border:0; border-radius:10px; padding:9px 13px; background:#16a879; color:#fff; font-weight:800; font-size:.77rem; transition:background .2s,transform .2s; }
-        .lp-live-join:hover { background:#10845f; transform:translateY(-1px); }
-        .lp-live-loading,.lp-live-empty { grid-column:1/-1; padding:32px; text-align:center; border:1px dashed #d8d8e6; border-radius:16px; color:#77788c; background:#fff; }
-        .lp-live-note { margin-top:17px; color:#77788c; font-size:.78rem; }
-        .lp-live-note i { color:#14a879; margin-right:6px; }
-        .lp-sec { scroll-margin-top:88px; }
-        .lp-panel,.lp-steps>div,.lp-calc { box-shadow:0 10px 30px rgba(12,10,40,.08); }
-        .lp-final { position:relative; overflow:hidden; }
-        .lp-final:before { content:""; position:absolute; width:360px; height:360px; right:-120px; top:-190px; border-radius:50%; background:rgba(46,230,166,.12); }
-        @media (min-width:992px) {
-            #userApp .container { max-width:none; }
-            #userApp .page-section { max-width:1500px; margin:0 auto; }
-            #userApp .app-bar { padding-left:28px; padding-right:28px; }
-        }
-        .job-row { gap:10px !important; padding:10px 12px !important; border-radius:13px !important; }
-        .job-ic { width:32px !important; height:32px !important; border-radius:9px !important; font-size:.88rem !important; }
-        .job-title { font-size:.9rem !important; }
-        .job-chips { margin:3px 0 !important; gap:4px !important; }
-        .job-chips span { padding:2px 7px !important; font-size:.66rem !important; }
-        .job-meta { gap:9px !important; font-size:.72rem !important; }
-        .job-join { padding:7px 12px !important; font-size:.76rem !important; }
-        @media (max-width:700px) {
-            .lp-live-section { padding:48px 0; }
-            .lp-live-head { align-items:flex-start; flex-direction:column; gap:14px; }
-            .lp-live-grid { grid-template-columns:1fr; }
-            .lp-live-job { padding:12px; gap:10px; }
-            .lp-live-thumb { width:42px; height:42px; flex-basis:42px; }
-            .lp-live-title { font-size:.86rem; }
-            .lp-live-join { padding:8px 10px; font-size:.72rem; }
-            .lp-hero-grid { padding-top:48px !important; padding-bottom:48px !important; }
-        }
-        @media (max-width:480px) {
-            .project-grid { grid-template-columns:1fr !important; }
-            .job-row { padding:9px 10px !important; gap:8px !important; }
-            .job-meta { gap:7px !important; font-size:.68rem !important; }
-        }
-        body.dark-mode .lp-live-section { background:#130f2a; color:#fff; }
-        body.dark-mode .lp-live-head .lp-h2 { color:#fff; }
-        body.dark-mode .lp-live-head p,body.dark-mode .lp-live-note { color:#aaa4c7; }
-        body.dark-mode .lp-live-job { background:#1d1740; border-color:#3a2f6b; }
-        body.dark-mode .lp-live-title { color:#fff; }
-        body.dark-mode .lp-live-tags span { background:#2a2160; color:#d9d0ff; }
-        body.dark-mode .lp-live-tags .lp-platform { background:#123d35; color:#8be8c5; }
-        body.dark-mode .lp-live-meta { color:#aaa4c7; }
-        body.dark-mode .lp-live-loading,body.dark-mode .lp-live-empty { background:#1d1740; border-color:#3a2f6b; color:#aaa4c7; }
-
     </style>
 </head>
 <body>
@@ -882,7 +654,7 @@
     <div id="customConfirmOverlay" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:99999;align-items:center;justify-content:center;padding:20px;">
         <div style="background:#fff;border-radius:16px;padding:22px;max-width:340px;width:100%;text-align:center;box-shadow:0 10px 40px rgba(0,0,0,0.2);">
             <i class="fas fa-exclamation-triangle" style="font-size:2rem;color:#f0ad4e;margin-bottom:10px;"></i>
-            <div id="customConfirmMessage" style="font-size:0.95rem;margin-bottom:18px;color:#24154f;">—</div>
+            <div id="customConfirmMessage" style="font-size:0.95rem;margin-bottom:18px;color:#0b2b4a;">—</div>
             <div style="display:flex;gap:10px;">
                 <button id="customConfirmCancelBtn" style="flex:1;border:1px solid #e2e8f0;background:#fff;color:#495057;border-radius:40px;padding:10px 0;font-weight:600;cursor:pointer;">বাতিল</button>
                 <button id="customConfirmOkBtn" style="flex:1;border:none;background:#dc3545;color:#fff;border-radius:40px;padding:10px 0;font-weight:600;cursor:pointer;">নিশ্চিত</button>
@@ -892,32 +664,32 @@
 
     <!-- ===== SIDE MENU ===== -->
     <div class="side-menu" id="sideMenu">
-        <div class="menu-header"><span class="logo-text"><i class="fas fa-crown"></i> F24 Boost</span><button class="close-btn" onclick="closeSideMenu()"><i class="fas fa-times"></i></button></div>
-        <div class="user-info"><div class="avatar" id="sideAvatar"><i class="fas fa-user-circle"></i></div><div class="user-details"><div class="name" id="sideName">User</div><div class="username" id="sideUsername">@username</div><div class="coins"><i class="fas fa-coins"></i> <span id="sideCoins">0</span> Coin</div></div></div>
-        <div class="menu-sec">Navigation</div>
-        <div class="menu-item active" data-page="home" onclick="navigateTo('home'); closeSideMenu();"><i class="fas fa-table-columns"></i> Dashboard</div>
-        <div class="menu-item" data-page="search" onclick="navigateTo('search'); closeSideMenu();"><i class="fas fa-magnifying-glass"></i> Find Jobs</div>
-        <div class="menu-item" onclick="openMyProjects(); closeSideMenu();"><i class="fas fa-clipboard-check"></i> Submitted Jobs <span class="badge" id="sideProjectCount">0</span></div>
-        <div class="menu-item" data-page="create" onclick="navigateTo('create'); closeSideMenu();"><i class="fas fa-circle-plus"></i> Create Project</div>
-        <div class="menu-item" data-page="community" onclick="navigateTo('community'); closeSideMenu();"><i class="fas fa-users"></i> Community</div>
-        <div class="menu-sec">Wallet</div>
-        <div class="menu-item" onclick="openBuyCoins(); closeSideMenu();"><i class="fas fa-arrow-down-to-line"></i> Deposit</div>
-        <div class="menu-item" onclick="openWithdraw(); closeSideMenu();"><i class="fas fa-money-bill-transfer"></i> Withdraw</div>
-        <div class="menu-item" onclick="openTransactionHistory(); closeSideMenu();"><i class="fas fa-file-lines"></i> Wallet Statement</div>
-        <div class="menu-sec">Help &amp; Support</div>
-        <div class="menu-item" onclick="openInfo(); closeSideMenu();"><i class="fas fa-shield-halved"></i> FAQ ও Safety Tips</div>
-        <div class="menu-item" data-page="help" onclick="navigateTo('help'); closeSideMenu();"><i class="fas fa-headset"></i> Contact Support</div>
-        <div class="menu-sec">Account</div>
-        <div class="menu-item" onclick="openVerify(); closeSideMenu();"><i class="fas fa-id-card"></i> Verify ID <span class="badge" id="sideVerifyBadge" style="background:#6c757d;">—</span></div>
-        <div class="menu-item" onclick="openReferral(); closeSideMenu();"><i class="fas fa-gift"></i> Refer &amp; Earn</div>
+        <div class="menu-header">
+            <span class="logo-text"><i class="fas fa-crown"></i> F24 Boost</span>
+            <button class="close-btn" onclick="closeSideMenu()"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="user-info">
+            <div class="avatar" id="sideAvatar"><i class="fas fa-user-circle"></i></div>
+            <div class="user-details">
+                <div class="name" id="sideName">User</div>
+                <div class="username" id="sideUsername">@username</div>
+                <div class="coins"><i class="fas fa-coins"></i> <span id="sideCoins">0</span> Coin</div>
+            </div>
+        </div>
+        <div class="menu-item active" onclick="navigateTo('home'); closeSideMenu();"><i class="fas fa-home"></i> Home</div>
+        <div class="menu-item" onclick="navigateTo('profile'); closeSideMenu();"><i class="fas fa-user"></i> Profile</div>
+        <div class="menu-item" onclick="openMyProjects(); closeSideMenu();"><i class="fas fa-folder"></i> My Projects <span class="badge" id="sideProjectCount">0</span></div>
+        <div class="menu-item" onclick="navigateTo('community'); closeSideMenu();"><i class="fas fa-users"></i> Community</div>
+        <div class="menu-item" onclick="openVerify(); closeSideMenu();"><i class="fas fa-id-card"></i> Verification <span class="badge" id="sideVerifyBadge" style="background:#6c757d;">—</span></div>
         <div class="menu-item" onclick="openLeaderboard(); closeSideMenu();"><i class="fas fa-trophy"></i> Leaderboard</div>
-        <div class="menu-item" onclick="openPremiumPurchase(); closeSideMenu();"><i class="fas fa-crown"></i> Premium</div>
-        <div class="menu-item" data-page="profile" onclick="navigateTo('profile'); closeSideMenu();"><i class="fas fa-user"></i> Profile</div>
-        <div class="menu-item" onclick="navigateTo('settings'); closeSideMenu();"><i class="fas fa-gear"></i> Settings</div>
-        <div class="menu-item danger" onclick="logoutUser(); closeSideMenu();"><i class="fas fa-arrow-right-from-bracket"></i> Logout</div>
-        <div class="menu-sec">Theme</div>
-        <div class="theme-row"><button class="theme-btn" data-m="light" onclick="setTheme('light')"><i class="fas fa-sun"></i> Light</button><button class="theme-btn" data-m="dark" onclick="setTheme('dark')"><i class="fas fa-moon"></i> Dark</button><button class="theme-btn" data-m="system" onclick="setTheme('system')"><i class="fas fa-desktop"></i> System</button></div>
-        <span id="sideDarkMode" style="display:none;">Off</span>
+        <div class="menu-item" onclick="openInfo(); closeSideMenu();"><i class="fas fa-shield-halved"></i> FAQ ও নিরাপত্তা টিপস</div>
+        <div class="menu-item" onclick="navigateTo('help'); closeSideMenu();"><i class="fas fa-question-circle"></i> Help Center</div>
+        <div class="menu-divider"></div>
+        <div class="menu-item" onclick="toggleDarkMode(); closeSideMenu();"><i class="fas fa-moon"></i> Dark Mode <span class="badge" id="sideDarkMode" style="background:#6c757d;">Off</span></div>
+        <div class="menu-item" onclick="navigateTo('settings'); closeSideMenu();"><i class="fas fa-cog"></i> Settings</div>
+        <div class="menu-item" onclick="checkForUpdateManually(); closeSideMenu();"><i class="fas fa-sync-alt"></i> Check for Update</div>
+        <div class="menu-divider"></div>
+        <div class="menu-item danger" onclick="logoutUser(); closeSideMenu();"><i class="fas fa-sign-out-alt"></i> Logout</div>
     </div>
     <div class="side-menu-overlay" id="sideMenuOverlay" onclick="closeSideMenu()"></div>
 
@@ -1086,7 +858,7 @@
     <!-- Force Update Modal -->
     <div class="modal-overlay" id="forceUpdateModal" style="z-index: 99999;">
         <div class="modal-content" style="max-width:400px;text-align:center;">
-            <div class="text-center mb-3"><i class="fas fa-arrow-alt-circle-up" style="font-size:3rem;color:#6c3ce0;"></i></div>
+            <div class="text-center mb-3"><i class="fas fa-arrow-alt-circle-up" style="font-size:3rem;color:#0d6efd;"></i></div>
             <h5 class="fw-bold">📱 নতুন আপডেট পাওয়া গেছে!</h5>
             <p class="text-muted small">ভার্সন <span id="forceUpdateVersion">—</span></p>
             <div class="text-start small text-muted mb-3" style="white-space:pre-line;" id="forceUpdateNotes">আপডেট করতে হবে। অন্যথায় অ্যাপ ব্যবহার করা যাবে না।</div>
@@ -1105,116 +877,10 @@
         </div>
     </div>
 
-
-    <!-- ===== LANDING PAGE ===== -->
-    <div id="landingPage" style="display:none;">
-        <header class="lp-head"><div class="lp-wrap lp-bar">
-            <a class="lp-brand" onclick="goHome()"><span class="lp-mark"><i class="fas fa-crown"></i></span>F24 Boost</a>
-            <nav class="lp-links"><a href="#lp-how">কীভাবে কাজ করে</a><a href="#lp-calc">আয়ের হিসাব</a><a href="#lp-cats">কাজের ধরন</a><a href="#lp-plans">প্রিমিয়াম</a><a href="#lp-reviews">রিভিউ</a><a href="#lp-faq">প্রশ্নোত্তর</a></nav>
-            <div class="lp-actions"><button class="lp-btn ghost lp-guest" onclick="goAuth('login')">লগইন</button><button class="lp-btn solid lp-guest" onclick="goAuth('register')">রেজিস্ট্রেশন</button><button class="lp-btn solid lp-user" onclick="enterDashboard()">ড্যাশবোর্ডে যান</button></div>
-        </div></header>
-
-        <section class="lp-hero"><div class="lp-wrap lp-hero-grid">
-            <div>
-                <div class="lp-pill"><i class="fas fa-circle"></i> বাংলাদেশের মাইক্রো জব মার্কেটপ্লেস</div>
-                <h1>ছোট ছোট কাজ করে আয় করুন, অথবা আপনার কাজ হাজারো মানুষকে দিয়ে করিয়ে নিন।</h1>
-                <p>YouTube, Facebook, Instagram, Telegram সহ নানা প্ল্যাটফর্মের কাজ এক জায়গায়। কাজ শেষ করুন, স্ক্রিনশট দিন, অ্যাপ্রুভ হলেই কয়েন আপনার ওয়ালেটে।</p>
-                <div class="lp-cta"><button class="lp-btn solid big lp-guest" onclick="goAuth('register')">বিনামূল্যে শুরু করুন</button><button class="lp-btn outline big lp-guest" onclick="goAuth('login')">লগইন করুন</button><button class="lp-btn solid big lp-user" onclick="enterDashboard()">ড্যাশবোর্ডে যান</button></div>
-                <div class="lp-trust"><span><i class="fas fa-check"></i>রেজিস্ট্রেশন ফ্রি</span><span><i class="fas fa-check"></i>ডকুমেন্ট ভেরিফাইড ইউজার</span><span><i class="fas fa-check"></i>রিয়েল-টাইম আপডেট</span></div>
-            </div>
-            <div class="lp-board" aria-hidden="true">
-                <div class="lp-board-top"><b>লাইভ টাস্ক বোর্ড</b><span>নমুনা</span></div>
-                <div class="lp-task"><i class="fab fa-youtube" style="background:#ff3d4a"></i><div><b>ভিডিও দেখে সাবস্ক্রাইব</b><em>YouTube · স্ক্রিনশট ১টি</em><div class="lp-bar-p"><span style="width:72%"></span></div></div><strong>+৫ <small>Coin</small></strong></div>
-                <div class="lp-task"><i class="fab fa-facebook-f" style="background:#2f6bff"></i><div><b>পেজ লাইক ও ফলো</b><em>Facebook · স্ক্রিনশট ২টি</em><div class="lp-bar-p"><span style="width:45%"></span></div></div><strong>+৩ <small>Coin</small></strong></div>
-                <div class="lp-task"><i class="fab fa-telegram-plane" style="background:#20a4e0"></i><div><b>চ্যানেলে জয়েন</b><em>Telegram · স্ক্রিনশট ১টি</em><div class="lp-bar-p"><span style="width:88%"></span></div></div><strong>+৪ <small>Coin</small></strong></div>
-                <div class="lp-wallet"><span>আপনার ওয়ালেট</span><b>আয় হবে প্রতিটি অ্যাপ্রুভড কাজে</b></div>
-            </div>
-        </div></section>
-
-        <section class="lp-live-section" id="lp-live-jobs">
-            <div class="lp-wrap">
-                <div class="lp-live-head">
-                    <div><span class="lp-live-kicker"><i class="fas fa-bolt"></i> LIVE MARKETPLACE</span>
-                    <h2 class="lp-h2">এখনই যেসব কাজ করা যাচ্ছে</h2>
-                    <p>কাজের ধরন ও রিওয়ার্ড দেখে পছন্দের কাজ বেছে নিন। বিস্তারিত ও থাম্বনেইল দেখতে Join Now চাপুন।</p></div>
-                    <button class="lp-btn outline" onclick="landingViewAllJobs()">সব কাজ দেখুন <i class="fas fa-arrow-right ms-1"></i></button>
-                </div>
-                <div class="lp-live-grid" id="lpLiveJobs"><div class="lp-live-loading"><i class="fas fa-circle-notch fa-spin"></i> কাজের তালিকা লোড হচ্ছে...</div></div>
-                <div class="lp-live-note"><i class="fas fa-shield-halved"></i> কাজের বিস্তারিত, নির্দেশনা ও প্রয়োজনীয় প্রমাণ জমা দেওয়ার নিয়ম প্রতিটি কাজের ভেতরে দেওয়া থাকে।</div>
-            </div>
-        </section>
-
-        <div class="lp-marquee" aria-hidden="true"><div class="lp-track"><span><i class="fab fa-youtube"></i>YouTube</span><span><i class="fab fa-facebook"></i>Facebook</span><span><i class="fab fa-instagram"></i>Instagram</span><span><i class="fab fa-tiktok"></i>TikTok</span><span><i class="fab fa-telegram"></i>Telegram</span><span><i class="fas fa-mobile-screen"></i>অ্যাপ ইনস্টল</span><span><i class="fas fa-globe"></i>ওয়েবসাইট ভিজিট</span><span><i class="fab fa-youtube"></i>YouTube</span><span><i class="fab fa-facebook"></i>Facebook</span><span><i class="fab fa-instagram"></i>Instagram</span><span><i class="fab fa-tiktok"></i>TikTok</span><span><i class="fab fa-telegram"></i>Telegram</span><span><i class="fas fa-mobile-screen"></i>অ্যাপ ইনস্টল</span><span><i class="fas fa-globe"></i>ওয়েবসাইট ভিজিট</span></div></div>
-        <section class="lp-stats" id="lpStats" style="display:none;"><div class="lp-wrap lp-stats-grid">
-            <div><b data-k="workers">0</b><span>কর্মী কাজ করছেন</span></div><div><b data-k="tasks">0</b><span>কাজ সম্পন্ন হয়েছে</span></div><div><b data-k="paid">0</b><span>Coin পরিশোধ হয়েছে</span></div><div><b data-k="active">0</b><span>চালু কাজ এখন</span></div>
-        </div></section>
-
-        <section class="lp-sec" id="lp-how"><div class="lp-wrap">
-            <h2 class="lp-h2">কীভাবে কাজ করে</h2>
-            <div class="lp-two">
-                <div class="lp-panel"><h3><i class="fas fa-user-check"></i>যারা কাজ করবেন</h3><ol>
-                    <li><b>রেজিস্ট্রেশন করুন</b><span>ফোন নম্বর ও পাসওয়ার্ড দিয়ে বিনামূল্যে অ্যাকাউন্ট খুলুন।</span></li>
-                    <li><b>ডকুমেন্ট দিয়ে ভেরিফাই হোন</b><span>NID বা জন্ম নিবন্ধন এবং লাইভ সেলফি দিন।</span></li>
-                    <li><b>কাজ বেছে নিন</b><span>প্ল্যাটফর্ম ও রিওয়ার্ড দেখে পছন্দের কাজ করুন।</span></li>
-                    <li><b>স্ক্রিনশট দিন, আয় করুন</b><span>অ্যাপ্রুভ হলে Coin ওয়ালেটে জমা হবে এবং তুলতে পারবেন।</span></li></ol></div>
-                <div class="lp-panel alt"><h3><i class="fas fa-bullhorn"></i>যারা কাজ দেবেন</h3><ol>
-                    <li><b>প্রিমিয়াম নিন</b><span>প্রজেক্ট তৈরি ও কমিউনিটিতে পোস্টের সুবিধা পান।</span></li>
-                    <li><b>প্রজেক্ট তৈরি করুন</b><span>প্ল্যাটফর্ম, কাজের নির্দেশনা, রিওয়ার্ড ও কতজন করবে ঠিক করুন।</span></li>
-                    <li><b>অংশগ্রহণকারীদের কাজ দেখুন</b><span>প্রতিটি সাবমিশন ও স্ক্রিনশট নিজে যাচাই করুন।</span></li>
-                    <li><b>অ্যাপ্রুভ করুন</b><span>ঠিক কাজেই রিওয়ার্ড যাবে, বাকিটা বাতিল।</span></li></ol></div>
-            </div>
-        </div></section>
-
-        <section class="lp-sec" id="lp-calc"><div class="lp-wrap"><h2 class="lp-h2">আপনার আয়ের হিসাব দেখুন</h2>
-            <div class="lp-calc"><div>
-                <label>দিনে কয়টি কাজ করবেন: <b id="calcTasksV">10</b></label><input type="range" id="calcTasks" min="1" max="50" value="10">
-                <label>প্রতি কাজে গড় রিওয়ার্ড (Coin): <b id="calcRewardV">5</b></label><input type="range" id="calcReward" min="1" max="30" value="5"></div>
-                <div class="lp-calc-out"><span>আনুমানিক আয়</span><b id="calcDay">৫০</b><small>Coin প্রতিদিন</small><b id="calcMonth">১,৫০০</b><small>Coin প্রতি মাসে (৩০ দিন)</small><em>এটি শুধু হিসাবের নমুনা। প্রকৃত আয় চালু কাজের ওপর নির্ভর করে।</em></div></div></div></section>
-        <section class="lp-sec soft" id="lp-verify"><div class="lp-wrap"><h2 class="lp-h2">নিরাপদ কমিউনিটির জন্য ৩ ধাপের ভেরিফিকেশন</h2>
-            <div class="lp-steps"><div><i class="fas fa-id-card"></i><h4>ডকুমেন্ট দিন</h4><p>NID বা জন্ম নিবন্ধনের ছবি ও নম্বর জমা দিন।</p></div><div><i class="fas fa-camera"></i><h4>লাইভ সেলফি</h4><p>ক্যামেরায় সেলফি তুলুন, ডকুমেন্টের ছবির সাথে মেলানো হবে।</p></div><div><i class="fas fa-circle-check"></i><h4>অনুমোদন</h4><p>অ্যাডমিন যাচাই করলেই কাজ শুরু করতে পারবেন।</p></div></div></div></section>
-        <section class="lp-sec soft" id="lp-cats"><div class="lp-wrap">
-            <h2 class="lp-h2">সব জনপ্রিয় প্ল্যাটফর্মের কাজ</h2>
-            <div class="lp-cats"><span><i class="fab fa-youtube"></i>YouTube</span><span><i class="fab fa-facebook"></i>Facebook</span><span><i class="fab fa-instagram"></i>Instagram</span><span><i class="fab fa-tiktok"></i>TikTok</span><span><i class="fab fa-telegram"></i>Telegram</span><span><i class="fas fa-mobile-screen"></i>অ্যাপ ইনস্টল</span><span><i class="fas fa-globe"></i>ওয়েবসাইট ভিজিট</span></div>
-            <div class="lp-feat">
-                <div><i class="fas fa-shield-halved"></i><h4>ভেরিফাইড কমিউনিটি</h4><p>কাজ শুরুর আগে প্রত্যেককে NID বা জন্ম নিবন্ধন ও লাইভ সেলফিতে যাচাই করা হয়।</p></div>
-                <div><i class="fas fa-bolt"></i><h4>রিয়েল-টাইম সব কিছু</h4><p>কাজের অবস্থা, ওয়ালেট, নোটিফিকেশন ও কাউন্টডাউন সাথে সাথে আপডেট হয়।</p></div>
-                <div><i class="fas fa-wallet"></i><h4>নিজস্ব ওয়ালেট</h4><p>আয় করা Coin জমা থাকে, বিকাশসহ পছন্দের মাধ্যমে উত্তোলনের আবেদন করা যায়।</p></div>
-            </div>
-        </div></section>
-
-        <section class="lp-sec" id="lp-plans"><div class="lp-wrap">
-            <h2 class="lp-h2">ফ্রি এবং প্রিমিয়াম</h2>
-            <div class="lp-two">
-                <div class="lp-panel"><h3>ফ্রি</h3><ul class="lp-ticks"><li>সব কাজ দেখা ও করা</li><li>Coin আয় ও উত্তোলন</li><li>ডেইলি রিওয়ার্ড</li><li>রেফারেল বোনাস</li></ul><button class="lp-btn outline" onclick="goAuth('register')">ফ্রিতে শুরু করুন</button></div>
-                <div class="lp-panel prem"><h3><i class="fas fa-crown"></i>প্রিমিয়াম</h3><ul class="lp-ticks"><li>নিজের প্রজেক্ট তৈরি করে কাজ করিয়ে নেওয়া</li><li>কমিউনিটিতে পোস্ট করার সুবিধা</li><li>প্রায়োরিটি অ্যাপ্রুভাল ও সাপোর্ট</li><li>প্রিমিয়াম ব্যাজ</li></ul><button class="lp-btn solid" onclick="goAuth('register')">প্রিমিয়াম নিতে রেজিস্ট্রেশন করুন</button></div>
-            </div>
-        </div></section>
-
-        <section class="lp-sec soft" id="lp-reviews"><div class="lp-wrap">
-            <h2 class="lp-h2">ব্যবহারকারীরা যা বলছেন</h2>
-            <div class="lp-reviews" id="lpReviews"></div>
-        </div></section>
-
-        <section class="lp-sec" id="lp-faq"><div class="lp-wrap lp-narrow">
-            <h2 class="lp-h2">সাধারণ প্রশ্ন</h2><div id="lpFaqList">
-            <details><summary>রেজিস্ট্রেশনে কি টাকা লাগে?</summary><p>না, রেজিস্ট্রেশন সম্পূর্ণ ফ্রি।</p></details>
-            <details><summary>ভেরিফিকেশন কেন লাগে?</summary><p>ভুয়া অ্যাকাউন্ট ঠেকাতে ও সবার আয় নিরাপদ রাখতে কাজ শুরুর আগে NID বা জন্ম নিবন্ধন এবং লাইভ সেলফি দিয়ে যাচাই করা হয়।</p></details>
-            <details><summary>আয়ের টাকা কীভাবে তুলব?</summary><p>কাজ অ্যাপ্রুভ হলে Coin ওয়ালেটে জমা হয়। ওয়ালেট থেকে সচল পেমেন্ট মাধ্যমে উত্তোলনের আবেদন করতে পারবেন।</p></details>
-            <details><summary>কাজ দিতে কী করতে হবে?</summary><p>প্রিমিয়াম সাবস্ক্রিপশন নিলে প্রজেক্ট তৈরি ও কমিউনিটিতে পোস্ট করতে পারবেন।</p></details>
-            <details><summary>মোবাইল থেকে ব্যবহার করা যাবে?</summary><p>হ্যাঁ, সাইটটি মোবাইল, ট্যাবলেট ও কম্পিউটার সব ডিভাইসে চলে।</p></details>
-        </div></div></section>
-
-        <section class="lp-final"><div class="lp-wrap"><h2>আজই শুরু করুন</h2><p>রেজিস্ট্রেশন করে ভেরিফাই হোন, তারপর কাজ শুরু।</p><button class="lp-btn solid big" onclick="goAuth('register')">বিনামূল্যে রেজিস্ট্রেশন</button></div></section>
-        <footer class="lp-foot"><div class="lp-wrap"><span>© F24 Boost</span><span><a onclick="goAuth('login')">লগইন</a> · <a onclick="goAuth('register')">রেজিস্ট্রেশন</a></span></div></footer>
-    </div>
-
     <!-- ===== AUTH PAGE ===== -->
-    <div id="authPage" style="display:none;width:100%;max-width:480px;margin:0 auto;padding:20px;min-height:100vh;align-items:center;justify-content:center;">
-        <div class="auth-aside"><a class="auth-back" onclick="goHome()"><i class="fas fa-arrow-left me-2"></i>হোমে ফিরুন</a>
-            <h2>কাজ করুন, আয় করুন।<br>অথবা কাজ দিন।</h2>
-            <ul><li><i class="fas fa-shield-halved"></i>ডকুমেন্ট ও ফেস ভেরিফাইড কমিউনিটি</li><li><i class="fas fa-bolt"></i>রিয়েল-টাইম ওয়ালেট ও অ্যাপ্রুভাল</li><li><i class="fas fa-crown"></i>প্রিমিয়ামে প্রজেক্ট ও কমিউনিটি পোস্ট</li></ul></div>
+    <div id="authPage" style="display:flex;width:100%;max-width:480px;margin:0 auto;padding:20px;min-height:100vh;align-items:center;justify-content:center;">
         <div class="auth-card" style="background:#ffffff;border-radius:24px;padding:32px 28px;box-shadow:0 8px 30px rgba(0,0,0,0.08);border:1px solid #edf2f7;width:100%;">
-            <div class="brand" style="font-size:1.6rem;font-weight:700;color:#24154f;text-align:center;margin-bottom:6px;"><i class="fas fa-crown" style="color:#f9c74f;margin-right:6px;"></i> F24 Boost</div>
+            <div class="brand" style="font-size:1.6rem;font-weight:700;color:#0b2b4a;text-align:center;margin-bottom:6px;"><i class="fas fa-crown" style="color:#f9c74f;margin-right:6px;"></i> F24 Boost</div>
             <div class="sub" style="text-align:center;color:#5d6f80;font-size:0.9rem;margin-bottom:24px;">ক্রিয়েটর কমিউনিটি</div>
             <div id="autoLoginTimer" class="auto-login-timer text-center" style="display:none;"><i class="fas fa-clock me-1"></i> স্বয়ংক্রিয় লগইন হচ্ছে <span id="countdownDisplay">10</span> সেকেন্ডে...</div>
             <form id="loginForm">
@@ -1222,11 +888,11 @@
                 <div class="mb-3 position-relative"><label class="form-label"><i class="fas fa-lock me-2"></i>পাসওয়ার্ড</label><input type="password" class="form-control" id="loginPassword" placeholder="পাসওয়ার্ড লিখুন" required style="border-radius:60px !important;padding:12px 18px;border:1px solid #e2e8f0;background:#fafcff;" /><button type="button" class="toggle-password" onclick="togglePass('loginPassword', this)" style="position:absolute;right:16px;top:50%;transform:translateY(-50%);background:none;border:none;color:#8a9aa8;cursor:pointer;"><i class="fas fa-eye"></i></button></div>
                 <div class="d-flex justify-content-between align-items-center mb-3">
                     <div class="form-check"><input class="form-check-input" type="checkbox" id="rememberMe" checked /><label class="form-check-label small" for="rememberMe">আমাকে মনে রাখুন</label></div>
-                    <a class="auth-link small" onclick="openResetPassword()" style="color:#6c3ce0;font-weight:600;cursor:pointer;text-decoration:none;">পাসওয়ার্ড ভুলে গেছেন?</a>
+                    <a class="auth-link small" onclick="openResetPassword()" style="color:#0d6efd;font-weight:600;cursor:pointer;text-decoration:none;">পাসওয়ার্ড ভুলে গেছেন?</a>
                 </div>
-                <button type="submit" class="btn-primary" style="background:#24154f;border:none;border-radius:60px !important;padding:12px;font-weight:700;width:100%;color:white;"><i class="fas fa-sign-in-alt me-2"></i>লগইন</button>
+                <button type="submit" class="btn-primary" style="background:#0b2b4a;border:none;border-radius:60px !important;padding:12px;font-weight:700;width:100%;color:white;"><i class="fas fa-sign-in-alt me-2"></i>লগইন</button>
                 <div class="divider" style="display:flex;align-items:center;gap:12px;color:#8a9aa8;font-size:0.8rem;margin:16px 0;"><span>অথবা</span></div>
-                <button type="button" class="btn-outline-primary" onclick="showRegisterForm()" style="border-radius:60px !important;border:1.5px solid #24154f;color:#24154f;font-weight:600;padding:10px;width:100%;background:transparent;"><i class="fas fa-user-plus me-2"></i>নতুন অ্যাকাউন্ট তৈরি করুন</button>
+                <button type="button" class="btn-outline-primary" onclick="showRegisterForm()" style="border-radius:60px !important;border:1.5px solid #0b2b4a;color:#0b2b4a;font-weight:600;padding:10px;width:100%;background:transparent;"><i class="fas fa-user-plus me-2"></i>নতুন অ্যাকাউন্ট তৈরি করুন</button>
             </form>
             <div id="loginMessage" class="mt-2 text-center small"></div>
             <div id="registerForm" style="display:none;margin-top:20px;">
@@ -1263,31 +929,12 @@
                 <div style="display:flex;align-items:center;gap:12px;">
                     <i class="fas fa-bars menu-icon" onclick="toggleSideMenu()"></i>
                     <span class="logo" onclick="navigateTo('home')"><i class="fas fa-crown"></i> F24 Boost</span>
-                    <div class="bottom-nav web-nav">
-                        <div class="nav-item active" data-page="home" onclick="navigateTo('home')"><i class="fas fa-home"></i>Home</div>
-                        <div class="nav-item" data-page="search" onclick="navigateTo('search')"><i class="fas fa-search"></i>Search</div>
-                        <div class="nav-item" data-page="create" onclick="navigateTo('create')"><i class="fas fa-plus-circle"></i>Create</div>
-                        <div class="nav-item" data-page="community" onclick="navigateTo('community')"><i class="fas fa-users"></i>Community</div>
-                        <div class="nav-item" data-page="profile" onclick="navigateTo('profile')"><i class="fas fa-user"></i>Profile</div>
-                    </div>
                 </div>
                 <div class="right-icons">
                     <span class="coin-badge" onclick="openBuyCoins()"><i class="fas fa-coins text-warning me-1"></i> <span id="headerCoins">০</span></span>
                     <span class="level-badge" id="headerLevel">L1</span>
                     <i class="fas fa-star" style="color:#f9c74f;" onclick="openFavoritesModal()" title="ফেভারিট"></i>
                     <i class="fas fa-bell" onclick="openNotifications()"><span class="badge-dot" id="notifDot"></span></i>
-                    <span class="web-user" onclick="event.stopPropagation();document.getElementById('webUserMenu').classList.toggle('open')"><span class="web-av" id="webAv"><i class="fas fa-user"></i></span><i class="fas fa-chevron-down" style="font-size:.65rem;"></i>
-                        <div class="web-dd" id="webUserMenu">
-                            <a onclick="navigateTo('profile')"><i class="fas fa-user"></i>Profile</a>
-                            <a onclick="openMyProjects()"><i class="fas fa-folder"></i>My Projects</a>
-                            <a onclick="openVerify()"><i class="fas fa-id-card"></i>Verification</a>
-                            <a onclick="goHome()"><i class="fas fa-globe"></i>ওয়েবসাইট হোম</a>
-                            <a onclick="openPremiumPurchase()"><i class="fas fa-crown"></i>Premium</a>
-                            <a onclick="navigateTo('help')"><i class="fas fa-question-circle"></i>Help Center</a>
-                            <a onclick="toggleDarkMode()"><i class="fas fa-moon"></i>Dark Mode</a>
-                            <a onclick="navigateTo('settings')"><i class="fas fa-cog"></i>Settings</a>
-                            <a class="text-danger" onclick="logoutUser()"><i class="fas fa-sign-out-alt"></i>Logout</a>
-                        </div></span>
                 </div>
             </div>
         </div>
@@ -1395,7 +1042,7 @@
                     <i class="fas fa-crown me-2"></i> <strong>প্রিমিয়াম প্রয়োজন!</strong> প্রকল্প তৈরি করতে প্রিমিয়াম সাবস্ক্রিপশন প্রয়োজন।
                     <button class="btn btn-warning btn-sm rounded-pill mt-2" onclick="openPremiumPurchase()"><i class="fas fa-crown me-1"></i>প্রিমিয়াম নিন</button>
                 </div>
-                <div class="wallet-card" style="background:white;color:#24154f;border:1px solid #edf2f7;transition:background 0.3s,color 0.3s,border-color 0.3s;">
+                <div class="wallet-card" style="background:white;color:#0b2b4a;border:1px solid #edf2f7;transition:background 0.3s,color 0.3s,border-color 0.3s;">
                     <div class="mb-3"><label class="form-label fw-bold">Step 1: Select Platform</label>
                         <div class="platform-select-grid" id="createPlatformSelect" style="grid-template-columns:1fr 1fr;">
                             <span class="text-muted small" style="grid-column:1/-1;">লোড হচ্ছে...</span>
@@ -1468,7 +1115,7 @@
                     <div class="small text-muted mt-1" id="postPremiumHint" style="display:none;"><i class="fas fa-crown me-1" style="color:#f9c74f;"></i>প্রিমিয়াম ইউজার — পোস্ট সরাসরি পাবলিশ হবে</div>
                 </div>
                 <div class="community-tabs" style="display:flex;gap:8px;margin-bottom:12px;">
-                    <button class="community-tab-btn active" id="communityTabFeed" onclick="switchCommunityTab('feed')" style="flex:1;border:none;background:#6c3ce0;color:#fff;border-radius:40px;padding:8px 0;font-size:0.85rem;font-weight:600;cursor:pointer;">ফিড</button>
+                    <button class="community-tab-btn active" id="communityTabFeed" onclick="switchCommunityTab('feed')" style="flex:1;border:none;background:#0d6efd;color:#fff;border-radius:40px;padding:8px 0;font-size:0.85rem;font-weight:600;cursor:pointer;">ফিড</button>
                     <button class="community-tab-btn" id="communityTabMine" onclick="switchCommunityTab('mine')" style="flex:1;border:none;background:#e9ecef;color:#495057;border-radius:40px;padding:8px 0;font-size:0.85rem;font-weight:600;cursor:pointer;">আমার পোস্ট</button>
                 </div>
                 <div id="communityPosts"></div>
@@ -1510,7 +1157,7 @@
                             <span>আপনার কয়েন: <strong id="premiumUserCoins">0</strong></span>
                         </div>
                         <button class="btn-premium mt-2" id="premiumPurchaseBtn" onclick="purchasePremium()"><i class="fas fa-crown me-2"></i>প্রিমিয়াম নিন</button>
-                        <div class="coin-warning" id="coinWarning"><i class="fas fa-exclamation-triangle me-1"></i>পর্যাপ্ত কয়েন নেই! <a href="#" onclick="openBuyCoins(); return false;" style="color:#6c3ce0;font-weight:600;">কয়েন কিনুন</a></div>
+                        <div class="coin-warning" id="coinWarning"><i class="fas fa-exclamation-triangle me-1"></i>পর্যাপ্ত কয়েন নেই! <a href="#" onclick="openBuyCoins(); return false;" style="color:#0d6efd;font-weight:600;">কয়েন কিনুন</a></div>
                     </div>
                     <div id="premiumActive" style="display:none;">
                         <div class="text-success"><i class="fas fa-check-circle me-2"></i><strong>প্রিমিয়াম সক্রিয় আছে!</strong><div class="small text-muted mt-1">মেয়াদ শেষ: <span id="premiumExpiryDisplay">—</span> <span id="premiumCountdown" class="fw-bold ms-1"></span></div></div>
@@ -1518,7 +1165,7 @@
                 </div>
 
                 <div class="profile-menu">
-                    <div class="menu-item" onclick="openReferral()"><i class="fas fa-share-alt" style="color:#6c3ce0;"></i>Referral<span class="arrow"><i class="fas fa-chevron-right"></i></span></div>
+                    <div class="menu-item" onclick="openReferral()"><i class="fas fa-share-alt" style="color:#0d6efd;"></i>Referral<span class="arrow"><i class="fas fa-chevron-right"></i></span></div>
                     <div class="menu-item" onclick="openMyProjects()"><i class="fas fa-folder" style="color:#198754;"></i>My Projects<span class="arrow"><i class="fas fa-chevron-right"></i></span></div>
                     <div class="menu-item" onclick="openBuyCoins()"><i class="fas fa-coins"></i>Buy Coins <span class="arrow"><i class="fas fa-chevron-right"></i></span></div>
                     <div class="menu-item" onclick="openWithdraw()"><i class="fas fa-arrow-up"></i>Withdraw <span class="arrow"><i class="fas fa-chevron-right"></i></span></div>
@@ -1581,7 +1228,15 @@
 
         </div>
 
-            </div>
+        <!-- Bottom Nav -->
+        <div class="bottom-nav">
+            <div class="nav-item active" data-page="home" onclick="navigateTo('home')"><i class="fas fa-home"></i>Home</div>
+            <div class="nav-item" data-page="search" onclick="navigateTo('search')"><i class="fas fa-search"></i>Search</div>
+            <div class="nav-item create-btn" data-page="create" onclick="navigateTo('create')"><i class="fas fa-plus-circle"></i></div>
+            <div class="nav-item" data-page="community" onclick="navigateTo('community')"><i class="fas fa-users"></i>Community</div>
+            <div class="nav-item" data-page="profile" onclick="navigateTo('profile')"><i class="fas fa-user"></i>Profile</div>
+        </div>
+    </div>
 
     <!-- ============================================================ -->
     <!-- ===== FIREBASE + FULL LOGIC ===== -->
@@ -1925,7 +1580,6 @@
         async function initApp() {
             const splash = document.getElementById('splashScreen');
             splash.classList.remove('hidden');
-            splash.classList.add('hidden'); showLanding();
 
             const fetchPromises = {
                 settings: get(settingsRef).then(s => s.val() || {}).catch(() => ({})),
@@ -1984,7 +1638,15 @@
             if (userData && userKey) {
                 currentUser = userData;
                 currentUserKey = userKey;
-                document.documentElement.classList.add('has-session');
+                enterApp();
+            } else {
+                if (!onboarded) {
+                    document.getElementById('onboardingOverlay').classList.add('active');
+                    startOnboarding();
+                } else {
+                    document.getElementById('authPage').style.display = 'flex';
+                    document.getElementById('userApp').style.display = 'none';
+                }
             }
         }
 
@@ -1994,7 +1656,7 @@
             document.getElementById('userApp').style.display = 'none';
             const timerDiv = document.getElementById('autoLoginTimer');
             timerDiv.style.display = 'block';
-            let countdown = 10;
+            let countdown = 3;
             document.getElementById('countdownDisplay').textContent = countdown;
             document.getElementById('loginEmail').value = currentUser.phone || currentUser.email || '';
             document.getElementById('loginPassword').value = currentUser.password || '';
@@ -2078,8 +1740,6 @@
         // ===== ENTER APP =====
         // ==========================================================
         function enterApp() {
-            document.getElementById('landingPage').style.display = 'none'; document.body.classList.remove('on-landing');
-            setTimeout(() => { if (needVerify() && !(verifyData && verifyData.status === 'pending')) openVerify(); }, 2500);
             hideAutoLoginTimer();
             document.getElementById('authPage').style.display = 'none';
             document.getElementById('userApp').style.display = 'block';
@@ -2546,7 +2206,7 @@
             const bannerAds = getActiveAds('home_banner');
             if (bannerAds.length === 0) {
                 container.innerHTML = `
-                    <div class="carousel-item active"><div class="banner-content" style="background:linear-gradient(145deg,#6c3ce0,#0b5ed7);"></div></div>
+                    <div class="carousel-item active"><div class="banner-content" style="background:linear-gradient(145deg,#0d6efd,#0b5ed7);"></div></div>
                     <div class="carousel-item"><div class="banner-content" style="background:linear-gradient(145deg,#198754,#157347);"></div></div>
                     <div class="carousel-item"><div class="banner-content" style="background:linear-gradient(145deg,#f9c74f,#f8961e);"></div></div>
                 `;
@@ -2555,7 +2215,7 @@
             let html = '';
             bannerAds.forEach((ad, index) => {
                 const activeClass = index === 0 ? 'active' : '';
-                const bgColor = ad.backgroundColor || '#6c3ce0';
+                const bgColor = ad.backgroundColor || '#0d6efd';
                 html += `
                     <div class="carousel-item ${activeClass}">
                         <div class="banner-content" style="background:${bgColor};cursor:pointer;display:flex;align-items:center;justify-content:center;" onclick="openAdLink('${ad.link || '#'}')">
@@ -2691,14 +2351,49 @@
                 const progress = p.totalTasks > 0 ? Math.round((p.completed || 0) / p.totalTasks * 100) : 0;
                 const isPremiumCreator = p.creatorPremium || false;
                 const isFull = p.remaining <= 0;
-                const ji = jobIcon(p); const chips = String(p.taskNames || '').split(',').map(t => t.trim()).filter(Boolean).slice(0, 3).map(t => `<span>${t}</span>`).join('');
-                html += `<div class="job-row" onclick="openProjectModal('${p.id}')">
-                    <div class="job-ic" style="background:${ji.bg}"><i class="${ji.ic}"></i></div>
-                    <div class="job-main"><div class="job-title">${p.title || 'শিরোনাম'}</div><div class="job-chips"><span class="plat">${p.platform || '—'}</span>${chips}</div>
-                        <div class="job-meta"><span><i class="fas fa-coins"></i>${p.reward || 0} Coin</span><span><i class="fas fa-users"></i>${p.remaining || 0}টি বাকি</span><span>${progress}%</span></div>
-                        <div class="job-bar"><span style="width:${progress}%"></span></div></div>
-                    <button class="job-join" ${isFull ? 'disabled' : ''} onclick="event.stopPropagation(); openProjectModal('${p.id}')">${isFull ? 'Full' : 'Join Now'}</button>
-                </div>`;
+                html += `
+                <div class="project-card">
+                    <div class="project-thumb" onclick="openProjectModal('${p.id}')">
+                        ${p.thumbnail ? `<img src="${p.thumbnail}" loading="lazy" />` : `<i class="fas fa-image"></i>`}
+                        ${isFull ? `<span style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(220,53,69,0.9);color:white;padding:4px 16px;border-radius:40px;font-weight:700;font-size:0.8rem;">FULL</span>` : ''}
+                        <button class="favorite-btn ${isFavoriteProject(p.id) ? 'active' : ''}" onclick="event.stopPropagation(); toggleFavoriteProject('${p.id}')" title="Favorite">
+                            <i class="${isFavoriteProject(p.id) ? 'fas' : 'far'} fa-star"></i>
+                        </button>
+                        <button class="project-menu-btn" onclick="event.stopPropagation(); toggleProjectMenu('${p.id}')">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </button>
+                        <div class="project-menu-dropdown" id="menu_${p.id}">
+                            <button class="dropdown-item" onclick="event.stopPropagation(); viewProjectDetails('${p.id}')"><i class="fas fa-info-circle"></i> Project Details</button>
+                            <button class="dropdown-item" onclick="event.stopPropagation(); viewProjectProgress('${p.id}')"><i class="fas fa-chart-bar"></i> Progress</button>
+                            <button class="dropdown-item" onclick="event.stopPropagation(); viewSubmissionsList('${p.id}')"><i class="fas fa-users"></i> Submissions</button>
+                            <button class="dropdown-item" onclick="event.stopPropagation(); shareProject('${p.id}')"><i class="fas fa-share-alt"></i> Share</button>
+                            <button class="dropdown-item" onclick="event.stopPropagation(); saveProject('${p.id}')"><i class="fas fa-bookmark"></i> Save</button>
+                            <button class="dropdown-item" onclick="event.stopPropagation(); viewCreatorProfile('${p.creatorId}')"><i class="fas fa-user"></i> View Creator</button>
+                            <button class="dropdown-item danger" onclick="event.stopPropagation(); reportProject('${p.id}')"><i class="fas fa-flag"></i> Report</button>
+                        </div>
+                    </div>
+                    <div class="project-body" onclick="openProjectModal('${p.id}')">
+                        <div class="creator-info" onclick="event.stopPropagation(); viewUserProfile('${p.creatorId || ''}')">
+                            <div class="creator-avatar">${p.creatorAvatar ? `<img src="${p.creatorAvatar}" loading="lazy" />` : `<i class="fas fa-user-circle"></i>`}</div>
+                            <span class="creator-name">${p.creator || 'অজানা'}</span>
+                            ${isPremiumCreator ? '<span class="creator-badge">⭐</span>' : ''}
+                        </div>
+                        <h6>${p.title || 'শিরোনাম'}</h6>
+                        <div class="project-details">
+                            <div class="detail-row"><span>📋 Platform</span> <strong>${p.platform || '—'}</strong></div>
+                            <div class="detail-row"><span>📝 Tasks</span> <strong>${p.taskNames || '—'}</strong></div>
+                            <div class="detail-row"><span>🪙 Reward</span> <strong>${p.reward || 0} Coin</strong></div>
+                            <div class="detail-row"><span>👥 Participants</span> <strong>${p.completed || 0}/${p.participants || 0}</strong></div>
+                            <div class="detail-row"><span>📸 Screenshots</span> <strong>${p.screenshotRequired || 1}টি</strong></div>
+                        </div>
+                        <div class="progress-bar"><div class="fill" style="width:${progress}%"></div></div>
+                        <div class="progress-info"><span>${progress}% Completed</span><span>${p.remaining || 0} spots left</span></div>
+                        <button class="btn-open" onclick="event.stopPropagation(); openProjectModal('${p.id}')" ${isFull ? 'disabled' : ''}>
+                            ${isFull ? 'Full' : 'Join Now'}
+                        </button>
+                    </div>
+                </div>
+                `;
                 if (ad && (index + 1) % 2 === 0 && index !== projects.length - 1) {
                     html += `
                         <div class="ad-card" onclick="openAdLink('${ad.link || '#'}')">
@@ -2860,7 +2555,7 @@
                                     <span class="badge bg-danger">❌ Rejected: ${rejected}</span>
                                 </div>
                                 <div class="progress-bar" style="height:8px;">
-                                    <div class="fill" style="width:${project.totalTasks > 0 ? Math.round((project.completed || 0) / project.totalTasks * 100) : 0}%;background:#6c3ce0;"></div>
+                                    <div class="fill" style="width:${project.totalTasks > 0 ? Math.round((project.completed || 0) / project.totalTasks * 100) : 0}%;background:#0d6efd;"></div>
                                 </div>
                                 <div class="mt-3">
                                     <h6 class="fw-bold">Participants (${projectSubmissions.length})</h6>
@@ -3329,7 +3024,7 @@
 
         function loadMyProjectsData(tab) {
             const container = document.getElementById('myProjectsContent');
-            container.innerHTML = `<div class="text-center text-muted py-4"><i class="fas fa-spinner fa-spin fa-2x mb-2" style="color:#6c3ce0;"></i><p>Loading...</p></div>`;
+            container.innerHTML = `<div class="text-center text-muted py-4"><i class="fas fa-spinner fa-spin fa-2x mb-2" style="color:#0d6efd;"></i><p>Loading...</p></div>`;
             if (!currentUserKey) { container.innerHTML = '<div class="text-danger text-center py-3">Please login first</div>'; return; }
             if (tab === 'myprojects') loadMyProjectsList(container);
             else if (tab === 'submissions') loadMySubmissionsList(container);
@@ -3401,7 +3096,7 @@
             let html = `<div class="project-stat-grid"><div class="project-stat-card"><div class="num">${submissions.length}</div><div class="label">Total Submitted</div></div><div class="project-stat-card"><div class="num" style="color:#198754;">${approved}</div><div class="label">Approved</div></div><div class="project-stat-card"><div class="num" style="color:#856404;">${pending}</div><div class="label">Pending</div></div><div class="project-stat-card"><div class="num" style="color:#dc3545;">${rejected}</div><div class="label">Rejected</div></div></div>`;
             submissions.forEach(s => {
                 const statusColor = s.status === 'approved' ? 'bg-success' : s.status === 'rejected' ? 'bg-danger' : 'bg-warning text-dark';
-                html += `<div class="my-project-card" onclick="viewSubmissionDetail('${s.id}')"><div class="d-flex gap-2"><div class="project-mini-thumb">${s.projectThumbnail ? `<img src="${s.projectThumbnail}" loading="lazy" />` : `<i class="fas fa-file-alt" style="display:flex;align-items:center;justify-content:center;height:100%;width:100%;color:#6c3ce0;"></i>`}</div><div class="flex-1" style="min-width:0;"><div class="d-flex justify-content-between align-items-start"><strong style="font-size:0.9rem;">${s.projectTitle || 'Project'}</strong><span class="badge ${statusColor}" style="font-size:0.6rem;">${s.status}</span></div><div class="small text-muted">👤 ${s.projectCreatorName || '—'} · ${s.projectPlatform || '—'}</div><div class="small">🪙 ${s.totalReward || 0} Coin · 📸 ${s.screenshotCount || 0} Screenshots</div><div class="small text-muted">📅 ${new Date(s.submittedAt).toLocaleString()}</div>${s.adminNote ? `<div class="small text-danger">📝 ${s.adminNote}</div>` : ''}</div></div></div>`;
+                html += `<div class="my-project-card" onclick="viewSubmissionDetail('${s.id}')"><div class="d-flex gap-2"><div class="project-mini-thumb">${s.projectThumbnail ? `<img src="${s.projectThumbnail}" loading="lazy" />` : `<i class="fas fa-file-alt" style="display:flex;align-items:center;justify-content:center;height:100%;width:100%;color:#0d6efd;"></i>`}</div><div class="flex-1" style="min-width:0;"><div class="d-flex justify-content-between align-items-start"><strong style="font-size:0.9rem;">${s.projectTitle || 'Project'}</strong><span class="badge ${statusColor}" style="font-size:0.6rem;">${s.status}</span></div><div class="small text-muted">👤 ${s.projectCreatorName || '—'} · ${s.projectPlatform || '—'}</div><div class="small">🪙 ${s.totalReward || 0} Coin · 📸 ${s.screenshotCount || 0} Screenshots</div><div class="small text-muted">📅 ${new Date(s.submittedAt).toLocaleString()}</div>${s.adminNote ? `<div class="small text-danger">📝 ${s.adminNote}</div>` : ''}</div></div></div>`;
             });
             container.innerHTML = html;
         }
@@ -3674,7 +3369,7 @@
                     `).join('') : ''}
                     <div class="comment-input-wrap" style="display:flex;gap:8px;margin-top:6px;">
                         <input type="text" id="commentInput_${key}" placeholder="মন্তব্য করুন..." style="flex:1;border:1px solid #e2e8f0;border-radius:40px;padding:6px 14px;font-size:0.8rem;outline:none;background:transparent;" onkeypress="if(event.key==='Enter') addComment('${key}')" />
-                        <button onclick="addComment('${key}')" style="border:none;background:#6c3ce0;color:white;border-radius:40px;padding:6px 14px;font-size:0.7rem;cursor:pointer;"><i class="fas fa-paper-plane"></i></button>
+                        <button onclick="addComment('${key}')" style="border:none;background:#0d6efd;color:white;border-radius:40px;padding:6px 14px;font-size:0.7rem;cursor:pointer;"><i class="fas fa-paper-plane"></i></button>
                     </div>
                 </div>
             </div>`;
@@ -3749,7 +3444,7 @@
             const commentsHtml = comments.length > 0 ? comments.map(([ck, c]) => `
                 <div class="comment-item" style="display:flex;gap:8px;margin-bottom:10px;font-size:0.85rem;">
                     <div onclick="viewUserProfile('${c.userId || ''}')" style="width:32px;height:32px;border-radius:50%;background:#dce3ec;overflow:hidden;flex-shrink:0;cursor:pointer;">${c.avatar ? `<img src="${c.avatar}" loading="lazy" style="width:100%;height:100%;object-fit:cover;" />` : `<i class="fas fa-user-circle" style="font-size:1.6rem;color:#8a9aa8;"></i>`}</div>
-                    <div style="background:#f4f2fc;border-radius:14px;padding:6px 12px;flex:1;">
+                    <div style="background:#f0f2f5;border-radius:14px;padding:6px 12px;flex:1;">
                         <strong onclick="viewUserProfile('${c.userId || ''}')" style="cursor:pointer;display:block;font-size:0.8rem;">${c.name || 'User'}</strong>
                         <div>${c.text}</div>
                     </div>
@@ -3783,7 +3478,7 @@
                 </div>
                 <div style="position:sticky;bottom:0;background:#fff;border-top:1px solid #edf2f7;padding:10px 14px;display:flex;gap:8px;">
                     <input type="text" id="postDetailCommentInput" placeholder="মন্তব্য করুন..." style="flex:1;border:1px solid #e2e8f0;border-radius:40px;padding:8px 16px;font-size:0.85rem;outline:none;" onkeypress="if(event.key==='Enter') submitPostDetailComment('${postId}')" />
-                    <button onclick="submitPostDetailComment('${postId}')" style="border:none;background:#6c3ce0;color:#fff;border-radius:40px;padding:8px 16px;cursor:pointer;"><i class="fas fa-paper-plane"></i></button>
+                    <button onclick="submitPostDetailComment('${postId}')" style="border:none;background:#0d6efd;color:#fff;border-radius:40px;padding:8px 16px;cursor:pointer;"><i class="fas fa-paper-plane"></i></button>
                 </div>
             `;
             document.getElementById('postDetailOverlay').style.display = 'flex';
@@ -3871,11 +3566,11 @@
             const feedContainer = document.getElementById('communityPosts');
             const mineContainer = document.getElementById('myCommunityPosts');
             if (tab === 'feed') {
-                feedBtn.classList.add('active'); feedBtn.style.background = '#6c3ce0'; feedBtn.style.color = '#fff';
+                feedBtn.classList.add('active'); feedBtn.style.background = '#0d6efd'; feedBtn.style.color = '#fff';
                 mineBtn.classList.remove('active'); mineBtn.style.background = '#e9ecef'; mineBtn.style.color = '#495057';
                 feedContainer.style.display = 'block'; mineContainer.style.display = 'none';
             } else {
-                mineBtn.classList.add('active'); mineBtn.style.background = '#6c3ce0'; mineBtn.style.color = '#fff';
+                mineBtn.classList.add('active'); mineBtn.style.background = '#0d6efd'; mineBtn.style.color = '#fff';
                 feedBtn.classList.remove('active'); feedBtn.style.background = '#e9ecef'; feedBtn.style.color = '#495057';
                 mineContainer.style.display = 'block'; feedContainer.style.display = 'none';
             }
@@ -4000,7 +3695,7 @@
                 const userNotifs = Object.entries(data).filter(([key, n]) => n.userId === currentUserKey).sort((a, b) => b[1].timestamp - a[1].timestamp);
                 if (userNotifs.length === 0) { showToast('🔔 কোনো নোটিফিকেশন নেই'); return; }
                 userNotifs.forEach(([key, n]) => { if (!n.read) update(ref(db, `notifications/${key}`), { read: true }); });
-                let html = userNotifs.map(([key, n]) => `<div class="notification-item" style="background:#f8fafc;border-radius:12px;padding:10px 14px;margin-bottom:6px;border-left:3px solid #6c3ce0;"><div class="d-flex justify-content-between"><strong>${n.title || 'Notification'}</strong><span style="font-size:0.6rem;color:#8a9aa8;">${new Date(n.timestamp).toLocaleString()}</span></div><div class="small">${n.message || ''}</div></div>`).join('');
+                let html = userNotifs.map(([key, n]) => `<div class="notification-item" style="background:#f8fafc;border-radius:12px;padding:10px 14px;margin-bottom:6px;border-left:3px solid #0d6efd;"><div class="d-flex justify-content-between"><strong>${n.title || 'Notification'}</strong><span style="font-size:0.6rem;color:#8a9aa8;">${new Date(n.timestamp).toLocaleString()}</span></div><div class="small">${n.message || ''}</div></div>`).join('');
                 const modalHtml = `<div class="modal-overlay active" id="notifModal"><div class="modal-content" style="max-width:450px;max-height:80vh;overflow-y:auto;"><button class="modal-close" onclick="closeModal('notifModal')">&#215;</button><h5 class="fw-bold mb-3"><i class="fas fa-bell me-2 text-primary"></i>Notifications</h5><div>${html}</div></div></div>`;
                 const existing = document.getElementById('notifModal');
                 if (existing) existing.remove();
@@ -4113,7 +3808,7 @@
                     methodsHtml = '<p class="text-muted small">কোনো পেমেন্ট মাধ্যম কনফিগার করা নেই। এডমিনের সাথে যোগাযোগ করুন।</p>';
                 }
                 
-                const modalHtml = `<div class="modal-overlay active" id="buyModal"><div class="modal-content" style="max-width:450px;max-height:90vh;overflow-y:auto;"><button class="modal-close" onclick="closeModal('buyModal')">&#215;</button><h5 class="fw-bold mb-3"><i class="fas fa-coins text-warning me-2"></i>Buy Coins</h5><div class="wallet-card" style="background:#f8fafc;color:#24154f;border:1px solid #edf2f7;padding:12px;"><div class="d-flex justify-content-between"><span>Available Coin</span><strong>${currentUser.coins || 0}</strong></div></div><div class="mt-3"><label class="form-label fw-bold">Step 1: Select Coin Package</label><div class="coin-packages">${packagesHtml}</div><div class="mt-2"><label class="form-label">অথবা Custom Coin</label><input type="number" class="form-control form-control-custom" id="customCoinInput" placeholder="যত Coin চান লিখুন" min="1" oninput="calculateBuyTotal()" /></div></div><div class="mt-3"><label class="form-label fw-bold">Step 2: Summary</label><div style="background:#f8fafc;border-radius:12px;padding:12px;"><div class="d-flex justify-content-between"><span>Selected Coin</span><strong id="buySelectedCoin">0</strong></div><div class="d-flex justify-content-between"><span>Coin Rate</span><strong>${coinRate} Coin = 1 USD</strong></div><div class="d-flex justify-content-between"><span>Total Payable</span><strong id="buyTotalPayable">0 ৳</strong></div></div></div><div class="mt-3"><label class="form-label fw-bold">Step 3: Select Payment Method</label><div id="depositMethodsList">${methodsHtml}</div></div><div class="mt-3" id="methodDetailSection" style="display:none;"><label class="form-label fw-bold">Step 4: Payment Details</label><div id="selectedMethodDetail" style="background:#f8fafc;border-radius:12px;padding:12px;border:1px solid #edf2f7;"></div></div><div class="mt-3"><label class="form-label fw-bold">Step 5: Payment Information</label><input type="text" class="form-control form-control-custom mb-2" id="senderNumber" placeholder="Sender Number (bKash/Nagad)" /><input type="text" class="form-control form-control-custom mb-2" id="transactionId" placeholder="Transaction ID" /><input type="file" class="form-control" id="paymentScreenshot" accept="image/*" /></div><button class="btn btn-success rounded-pill w-100 py-2 mt-3" onclick="submitBuyRequest()"><i class="fas fa-paper-plane me-2"></i>Submit Request</button><div id="buyStatus" class="mt-2 text-center small"></div></div></div>`;
+                const modalHtml = `<div class="modal-overlay active" id="buyModal"><div class="modal-content" style="max-width:450px;max-height:90vh;overflow-y:auto;"><button class="modal-close" onclick="closeModal('buyModal')">&#215;</button><h5 class="fw-bold mb-3"><i class="fas fa-coins text-warning me-2"></i>Buy Coins</h5><div class="wallet-card" style="background:#f8fafc;color:#0b2b4a;border:1px solid #edf2f7;padding:12px;"><div class="d-flex justify-content-between"><span>Available Coin</span><strong>${currentUser.coins || 0}</strong></div></div><div class="mt-3"><label class="form-label fw-bold">Step 1: Select Coin Package</label><div class="coin-packages">${packagesHtml}</div><div class="mt-2"><label class="form-label">অথবা Custom Coin</label><input type="number" class="form-control form-control-custom" id="customCoinInput" placeholder="যত Coin চান লিখুন" min="1" oninput="calculateBuyTotal()" /></div></div><div class="mt-3"><label class="form-label fw-bold">Step 2: Summary</label><div style="background:#f8fafc;border-radius:12px;padding:12px;"><div class="d-flex justify-content-between"><span>Selected Coin</span><strong id="buySelectedCoin">0</strong></div><div class="d-flex justify-content-between"><span>Coin Rate</span><strong>${coinRate} Coin = 1 USD</strong></div><div class="d-flex justify-content-between"><span>Total Payable</span><strong id="buyTotalPayable">0 ৳</strong></div></div></div><div class="mt-3"><label class="form-label fw-bold">Step 3: Select Payment Method</label><div id="depositMethodsList">${methodsHtml}</div></div><div class="mt-3" id="methodDetailSection" style="display:none;"><label class="form-label fw-bold">Step 4: Payment Details</label><div id="selectedMethodDetail" style="background:#f8fafc;border-radius:12px;padding:12px;border:1px solid #edf2f7;"></div></div><div class="mt-3"><label class="form-label fw-bold">Step 5: Payment Information</label><input type="text" class="form-control form-control-custom mb-2" id="senderNumber" placeholder="Sender Number (bKash/Nagad)" /><input type="text" class="form-control form-control-custom mb-2" id="transactionId" placeholder="Transaction ID" /><input type="file" class="form-control" id="paymentScreenshot" accept="image/*" /></div><button class="btn btn-success rounded-pill w-100 py-2 mt-3" onclick="submitBuyRequest()"><i class="fas fa-paper-plane me-2"></i>Submit Request</button><div id="buyStatus" class="mt-2 text-center small"></div></div></div>`;
                 const existing = document.getElementById('buyModal');
                 if (existing) existing.remove();
                 document.body.insertAdjacentHTML('beforeend', modalHtml);
@@ -4145,7 +3840,7 @@
                             <div class="small text-muted">এই মাধ্যমে পেমেন্ট করুন</div>
                         </div>
                     </div>
-                    <div style="background:#e8f0fe;border-radius:8px;padding:10px;border:1px solid #6c3ce0;margin-bottom:8px;">
+                    <div style="background:#e8f0fe;border-radius:8px;padding:10px;border:1px solid #0d6efd;margin-bottom:8px;">
                         <strong>📱 পেমেন্ট নাম্বার:</strong> <span style="font-size:1.1rem;font-weight:700;">${paymentNumber}</span>
                     </div>
                 `;
@@ -4270,7 +3965,7 @@
                     methodsHtml = '<p class="text-muted small">কোনো পেমেন্ট মাধ্যম কনফিগার করা নেই। এডমিনের সাথে যোগাযোগ করুন।</p>';
                 }
                 
-                const modalHtml = `<div class="modal-overlay active" id="withdrawModal"><div class="modal-content" style="max-width:450px;max-height:90vh;overflow-y:auto;"><button class="modal-close" onclick="closeModal('withdrawModal')">&#215;</button><h5 class="fw-bold mb-3"><i class="fas fa-arrow-up text-primary me-2"></i>Withdraw</h5><div class="wallet-card" style="background:#f8fafc;color:#24154f;border:1px solid #edf2f7;padding:12px;"><div class="d-flex justify-content-between"><span>Available Coin</span><strong>${currentUser.coins || 0}</strong></div><div class="d-flex justify-content-between"><span>Pending Coin</span><strong>${currentUser.pendingCoins || 0}</strong></div></div><div class="mt-3"><label class="form-label fw-bold">Withdraw Rules</label><div style="background:#e8f0fe;border-radius:12px;padding:12px;font-size:0.85rem;"><div>Minimum: <strong>${minWithdraw} Coin</strong></div><div>Maximum: <strong>${maxWithdraw} Coin</strong></div><div>Conversion Rate: <strong>${conversionRate} ৳ per Coin</strong></div></div></div><div class="mt-3"><label class="form-label fw-bold">Select Payment Method</label><div id="withdrawMethodsList">${methodsHtml}</div></div><div class="mt-3" id="withdrawMethodDetailSection" style="display:none;"><label class="form-label fw-bold">Payment Instructions</label><div id="selectedWithdrawMethodDetail" style="background:#f8fafc;border-radius:12px;padding:12px;border:1px solid #edf2f7;"></div></div><div class="mt-3"><label class="form-label fw-bold">Withdraw Information</label><input type="text" class="form-control form-control-custom mb-2" id="withdrawAccount" placeholder="Account Number (bKash/Nagad)" /><input type="number" class="form-control form-control-custom" id="withdrawAmount" placeholder="Withdraw Amount (Coin)" min="${minWithdraw}" max="${maxWithdraw}" oninput="calculateWithdrawTotal()" /><div style="background:#f8fafc;border-radius:12px;padding:12px;margin-top:8px;"><div class="d-flex justify-content-between"><span>Will Receive</span><strong id="withdrawReceive">0 ৳</strong></div><div class="d-flex justify-content-between"><span>Coin Will Be Cut</span><strong id="withdrawCoinCut">0 Coin</strong></div></div></div><button class="btn btn-primary rounded-pill w-100 py-2 mt-3" onclick="submitWithdrawRequest()"><i class="fas fa-paper-plane me-2"></i>Submit Withdraw Request</button><div id="withdrawStatus" class="mt-2 text-center small"></div></div></div>`;
+                const modalHtml = `<div class="modal-overlay active" id="withdrawModal"><div class="modal-content" style="max-width:450px;max-height:90vh;overflow-y:auto;"><button class="modal-close" onclick="closeModal('withdrawModal')">&#215;</button><h5 class="fw-bold mb-3"><i class="fas fa-arrow-up text-primary me-2"></i>Withdraw</h5><div class="wallet-card" style="background:#f8fafc;color:#0b2b4a;border:1px solid #edf2f7;padding:12px;"><div class="d-flex justify-content-between"><span>Available Coin</span><strong>${currentUser.coins || 0}</strong></div><div class="d-flex justify-content-between"><span>Pending Coin</span><strong>${currentUser.pendingCoins || 0}</strong></div></div><div class="mt-3"><label class="form-label fw-bold">Withdraw Rules</label><div style="background:#e8f0fe;border-radius:12px;padding:12px;font-size:0.85rem;"><div>Minimum: <strong>${minWithdraw} Coin</strong></div><div>Maximum: <strong>${maxWithdraw} Coin</strong></div><div>Conversion Rate: <strong>${conversionRate} ৳ per Coin</strong></div></div></div><div class="mt-3"><label class="form-label fw-bold">Select Payment Method</label><div id="withdrawMethodsList">${methodsHtml}</div></div><div class="mt-3" id="withdrawMethodDetailSection" style="display:none;"><label class="form-label fw-bold">Payment Instructions</label><div id="selectedWithdrawMethodDetail" style="background:#f8fafc;border-radius:12px;padding:12px;border:1px solid #edf2f7;"></div></div><div class="mt-3"><label class="form-label fw-bold">Withdraw Information</label><input type="text" class="form-control form-control-custom mb-2" id="withdrawAccount" placeholder="Account Number (bKash/Nagad)" /><input type="number" class="form-control form-control-custom" id="withdrawAmount" placeholder="Withdraw Amount (Coin)" min="${minWithdraw}" max="${maxWithdraw}" oninput="calculateWithdrawTotal()" /><div style="background:#f8fafc;border-radius:12px;padding:12px;margin-top:8px;"><div class="d-flex justify-content-between"><span>Will Receive</span><strong id="withdrawReceive">0 ৳</strong></div><div class="d-flex justify-content-between"><span>Coin Will Be Cut</span><strong id="withdrawCoinCut">0 Coin</strong></div></div></div><button class="btn btn-primary rounded-pill w-100 py-2 mt-3" onclick="submitWithdrawRequest()"><i class="fas fa-paper-plane me-2"></i>Submit Withdraw Request</button><div id="withdrawStatus" class="mt-2 text-center small"></div></div></div>`;
                 const existing = document.getElementById('withdrawModal');
                 if (existing) existing.remove();
                 document.body.insertAdjacentHTML('beforeend', modalHtml);
@@ -4380,7 +4075,7 @@
                 const allTransactions = snapshot.val() || {};
                 const userTransactions = Object.entries(allTransactions).filter(([key, tx]) => tx.userId === currentUserKey).sort((a, b) => new Date(b[1].dateTime) - new Date(a[1].dateTime)).map(([key, tx]) => ({ id: key, ...tx }));
                 if (userTransactions.length === 0) { showToast('📄 কোনো Transaction পাওয়া যায়নি'); return; }
-                let historyHtml = userTransactions.map(tx => { const statusColors = { pending: 'bg-warning text-dark', approved: 'bg-success', rejected: 'bg-danger', completed: 'bg-info' }; const typeIcon = tx.type === 'buy' ? 'fa-arrow-down text-success' : 'fa-arrow-up text-primary'; const typeLabel = tx.type === 'buy' ? 'Buy' : 'Withdraw'; const isWithdraw = tx.type === 'withdraw'; return `<div class="transaction-item ${isWithdraw ? 'withdraw' : ''}" style="background:#f8fafc;border-radius:12px;padding:12px;margin-bottom:8px;border-left:4px solid ${isWithdraw ? '#6c3ce0' : '#198754'};"><div class="d-flex justify-content-between align-items-start"><div><span class="badge ${statusColors[tx.status] || 'bg-secondary'}">${tx.status || 'pending'}</span><span class="badge bg-light text-dark ms-1"><i class="${typeIcon} me-1"></i>${typeLabel}</span>${tx.paymentMethod ? `<span class="badge bg-light text-dark ms-1"><i class="fas fa-credit-card me-1"></i>${tx.paymentMethod}</span>` : ''}</div><small class="text-muted">${new Date(tx.dateTime).toLocaleString()}</small></div><div class="mt-1"><strong>${tx.type === 'buy' ? tx.coinAmount || tx.amount : tx.amount} Coin</strong>${tx.totalPayable ? `<span class="text-muted">· ${tx.totalPayable.toFixed(2)} ৳</span>` : ''}${tx.payableAmount ? `<span class="text-muted">· ${tx.payableAmount.toFixed(2)} ৳</span>` : ''}</div><div class="small text-muted">${tx.senderNumber ? `Sender: ${tx.senderNumber}` : ''}${tx.accountNumber ? `Account: ${tx.accountNumber}` : ''}${tx.transactionId ? `· ID: ${tx.transactionId}` : ''}</div>${tx.adminNote ? `<div class="small text-danger mt-1"><i class="fas fa-info-circle me-1"></i>${tx.adminNote}</div>` : ''}</div>`; }).join('');
+                let historyHtml = userTransactions.map(tx => { const statusColors = { pending: 'bg-warning text-dark', approved: 'bg-success', rejected: 'bg-danger', completed: 'bg-info' }; const typeIcon = tx.type === 'buy' ? 'fa-arrow-down text-success' : 'fa-arrow-up text-primary'; const typeLabel = tx.type === 'buy' ? 'Buy' : 'Withdraw'; const isWithdraw = tx.type === 'withdraw'; return `<div class="transaction-item ${isWithdraw ? 'withdraw' : ''}" style="background:#f8fafc;border-radius:12px;padding:12px;margin-bottom:8px;border-left:4px solid ${isWithdraw ? '#0d6efd' : '#198754'};"><div class="d-flex justify-content-between align-items-start"><div><span class="badge ${statusColors[tx.status] || 'bg-secondary'}">${tx.status || 'pending'}</span><span class="badge bg-light text-dark ms-1"><i class="${typeIcon} me-1"></i>${typeLabel}</span>${tx.paymentMethod ? `<span class="badge bg-light text-dark ms-1"><i class="fas fa-credit-card me-1"></i>${tx.paymentMethod}</span>` : ''}</div><small class="text-muted">${new Date(tx.dateTime).toLocaleString()}</small></div><div class="mt-1"><strong>${tx.type === 'buy' ? tx.coinAmount || tx.amount : tx.amount} Coin</strong>${tx.totalPayable ? `<span class="text-muted">· ${tx.totalPayable.toFixed(2)} ৳</span>` : ''}${tx.payableAmount ? `<span class="text-muted">· ${tx.payableAmount.toFixed(2)} ৳</span>` : ''}</div><div class="small text-muted">${tx.senderNumber ? `Sender: ${tx.senderNumber}` : ''}${tx.accountNumber ? `Account: ${tx.accountNumber}` : ''}${tx.transactionId ? `· ID: ${tx.transactionId}` : ''}</div>${tx.adminNote ? `<div class="small text-danger mt-1"><i class="fas fa-info-circle me-1"></i>${tx.adminNote}</div>` : ''}</div>`; }).join('');
                 const modalHtml = `<div class="modal-overlay active" id="historyModal"><div class="modal-content" style="max-width:450px;max-height:80vh;overflow-y:auto;"><button class="modal-close" onclick="closeModal('historyModal')">&#215;</button><h5 class="fw-bold mb-3"><i class="fas fa-history me-2 text-primary"></i>Transaction History</h5><div class="transaction-list">${historyHtml}</div></div></div>`;
                 const existing = document.getElementById('historyModal');
                 if (existing) existing.remove();
@@ -4400,7 +4095,7 @@
                 const referralEnabled = settings.referralEnabled !== false;
                 if (!referralEnabled) { showToast('⚠️ Referral বর্তমানে বন্ধ আছে'); return; }
                 const referralLink = `https://f24boost.com/register?ref=${currentUser.referralCode || 'F24'}`;
-                const modalHtml = `<div class="modal-overlay active" id="referralModal"><div class="modal-content" style="max-width:450px;"><button class="modal-close" onclick="closeModal('referralModal')">&#215;</button><h5 class="fw-bold mb-3"><i class="fas fa-share-alt text-primary me-2"></i>Referral</h5><div class="referral-card" style="background:#f8fafc;border-radius:16px;padding:16px;border:1px solid #edf2f7;margin-bottom:12px;"><div class="referral-code-box" style="background:white;border-radius:12px;padding:12px;border:2px dashed #6c3ce0;text-align:center;font-size:1.2rem;font-weight:700;letter-spacing:2px;"><span id="referralCodeDisplay">${currentUser.referralCode || 'F24'}</span></div><div class="d-flex gap-2 mt-2"><button class="btn btn-outline-primary btn-sm rounded-pill flex-1" onclick="copyReferralLink('${referralLink}')"><i class="fas fa-copy me-1"></i>Copy</button><button class="btn btn-primary btn-sm rounded-pill flex-1" onclick="shareReferralLink('${referralLink}')"><i class="fas fa-share-alt me-1"></i>Share</button></div></div><div class="referral-stats-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px;"><div class="referral-stat" style="background:white;border-radius:12px;padding:10px;text-align:center;border:1px solid #edf2f7;"><div class="num" style="font-size:1.2rem;font-weight:700;">${currentUser.referralCount || 0}</div><div class="label" style="font-size:0.65rem;color:#8a9aa8;">Total Referrals</div></div><div class="referral-stat" style="background:white;border-radius:12px;padding:10px;text-align:center;border:1px solid #edf2f7;"><div class="num" style="font-size:1.2rem;font-weight:700;">${currentUser.referralRewards || 0}</div><div class="label" style="font-size:0.65rem;color:#8a9aa8;">Total Coins</div></div></div><div class="mt-2 small text-muted"><i class="fas fa-info-circle me-1"></i>প্রতি রেফারেলে ${bonusCoin} Coin পাবেন</div></div></div>`;
+                const modalHtml = `<div class="modal-overlay active" id="referralModal"><div class="modal-content" style="max-width:450px;"><button class="modal-close" onclick="closeModal('referralModal')">&#215;</button><h5 class="fw-bold mb-3"><i class="fas fa-share-alt text-primary me-2"></i>Referral</h5><div class="referral-card" style="background:#f8fafc;border-radius:16px;padding:16px;border:1px solid #edf2f7;margin-bottom:12px;"><div class="referral-code-box" style="background:white;border-radius:12px;padding:12px;border:2px dashed #0d6efd;text-align:center;font-size:1.2rem;font-weight:700;letter-spacing:2px;"><span id="referralCodeDisplay">${currentUser.referralCode || 'F24'}</span></div><div class="d-flex gap-2 mt-2"><button class="btn btn-outline-primary btn-sm rounded-pill flex-1" onclick="copyReferralLink('${referralLink}')"><i class="fas fa-copy me-1"></i>Copy</button><button class="btn btn-primary btn-sm rounded-pill flex-1" onclick="shareReferralLink('${referralLink}')"><i class="fas fa-share-alt me-1"></i>Share</button></div></div><div class="referral-stats-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px;"><div class="referral-stat" style="background:white;border-radius:12px;padding:10px;text-align:center;border:1px solid #edf2f7;"><div class="num" style="font-size:1.2rem;font-weight:700;">${currentUser.referralCount || 0}</div><div class="label" style="font-size:0.65rem;color:#8a9aa8;">Total Referrals</div></div><div class="referral-stat" style="background:white;border-radius:12px;padding:10px;text-align:center;border:1px solid #edf2f7;"><div class="num" style="font-size:1.2rem;font-weight:700;">${currentUser.referralRewards || 0}</div><div class="label" style="font-size:0.65rem;color:#8a9aa8;">Total Coins</div></div></div><div class="mt-2 small text-muted"><i class="fas fa-info-circle me-1"></i>প্রতি রেফারেলে ${bonusCoin} Coin পাবেন</div></div></div>`;
                 const existing = document.getElementById('referralModal');
                 if (existing) existing.remove();
                 document.body.insertAdjacentHTML('beforeend', modalHtml);
@@ -4430,7 +4125,7 @@
                 let isFollowing = false;
                 Object.entries(follows).forEach(([key, val]) => { if (val.follower === currentUserKey && val.following === userId) isFollowing = true; });
                 const completedProjects = userProjects.filter(p => p.status === 'live').length;
-                const content = `<div class="user-profile-card" style="background:white;border-radius:20px;padding:20px;border:1px solid #edf2f7;margin-bottom:14px;"><div class="user-avatar" style="width:80px;height:80px;border-radius:50%;background:#dce3ec;overflow:hidden;margin:0 auto 10px;">${user.profilePic ? `<img src="${user.profilePic}" loading="lazy" />` : `<i class="fas fa-user-circle" style="font-size:4rem;display:flex;align-items:center;justify-content:center;height:100%;color:#8a9aa8;"></i>`}</div><div class="user-name" style="font-weight:700;font-size:1.1rem;text-align:center;">${user.name || '—'}</div><div class="user-username" style="font-size:0.8rem;color:#8a9aa8;text-align:center;">@${user.username || '—'} ${user.isPremium ? '<span class="badge bg-warning text-dark"><i class="fas fa-crown me-1"></i>Premium</span>' : ''}</div><div class="user-stats" style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0;"><div style="text-align:center;background:#f8fafc;border-radius:12px;padding:8px;border:1px solid #edf2f7;"><strong style="display:block;font-size:1rem;">${userProjects.length}</strong><span style="font-size:0.6rem;color:#8a9aa8;">Projects</span></div><div style="text-align:center;background:#f8fafc;border-radius:12px;padding:8px;border:1px solid #edf2f7;"><strong style="display:block;font-size:1rem;">${completedProjects}</strong><span style="font-size:0.6rem;color:#8a9aa8;">Completed</span></div><div style="text-align:center;background:#f8fafc;border-radius:12px;padding:8px;border:1px solid #edf2f7;"><strong style="display:block;font-size:1rem;">${followers}</strong><span style="font-size:0.6rem;color:#8a9aa8;">Followers</span></div><div style="text-align:center;background:#f8fafc;border-radius:12px;padding:8px;border:1px solid #edf2f7;"><strong style="display:block;font-size:1rem;">${user.totalEarned || 0}</strong><span style="font-size:0.6rem;color:#8a9aa8;">Earned Coin</span></div><div style="text-align:center;background:#f8fafc;border-radius:12px;padding:8px;border:1px solid #edf2f7;"><strong style="display:block;font-size:1rem;">L${user.level || 1}</strong><span style="font-size:0.6rem;color:#8a9aa8;">Level</span></div><div style="text-align:center;background:#f8fafc;border-radius:12px;padding:8px;border:1px solid #edf2f7;"><strong style="display:block;font-size:1rem;">${new Date(user.joinDate).toLocaleDateString()}</strong><span style="font-size:0.6rem;color:#8a9aa8;">Joined</span></div></div><button class="follow-btn ${isFollowing ? 'following' : ''}" onclick="toggleFollow('${userId}')" style="display:block;width:100%;padding:8px;border-radius:40px;border:2px solid #6c3ce0;background:${isFollowing ? '#6c3ce0' : 'transparent'};color:${isFollowing ? 'white' : '#6c3ce0'};font-weight:600;cursor:pointer;transition:0.2s;">${isFollowing ? '✅ Following' : '➕ Follow'}</button></div>${userProjects.length > 0 ? `<div class="mt-3"><h6 class="fw-bold"><i class="fas fa-list me-2"></i>${user.name}-এর প্রকল্পসমূহ</h6>${userProjects.slice(0, 5).map(p => `<div class="my-project-card" onclick="openProjectModal('${p.id}')"><div class="d-flex gap-2"><div class="project-mini-thumb">${p.thumbnail ? `<img src="${p.thumbnail}" loading="lazy" />` : `<i class="fas fa-image" style="display:flex;align-items:center;justify-content:center;height:100%;"></i>`}</div><div class="flex-1"><strong>${p.title || 'Project'}</strong><div class="small text-muted">${p.platform || '—'} · ${p.taskNames || '—'}</div><div class="small">🪙 ${p.reward || 0} Coin · 👥 ${p.completed || 0}/${p.participants || 0}</div></div></div></div>`).join('')}${userProjects.length > 5 ? `<p class="text-muted small">এবং আরও ${userProjects.length - 5}টি প্রকল্প...</p>` : ''}</div>` : '<p class="text-muted small">এই ইউজার এখনো কোনো প্রকল্প তৈরি করেনি</p>'}`;
+                const content = `<div class="user-profile-card" style="background:white;border-radius:20px;padding:20px;border:1px solid #edf2f7;margin-bottom:14px;"><div class="user-avatar" style="width:80px;height:80px;border-radius:50%;background:#dce3ec;overflow:hidden;margin:0 auto 10px;">${user.profilePic ? `<img src="${user.profilePic}" loading="lazy" />` : `<i class="fas fa-user-circle" style="font-size:4rem;display:flex;align-items:center;justify-content:center;height:100%;color:#8a9aa8;"></i>`}</div><div class="user-name" style="font-weight:700;font-size:1.1rem;text-align:center;">${user.name || '—'}</div><div class="user-username" style="font-size:0.8rem;color:#8a9aa8;text-align:center;">@${user.username || '—'} ${user.isPremium ? '<span class="badge bg-warning text-dark"><i class="fas fa-crown me-1"></i>Premium</span>' : ''}</div><div class="user-stats" style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0;"><div style="text-align:center;background:#f8fafc;border-radius:12px;padding:8px;border:1px solid #edf2f7;"><strong style="display:block;font-size:1rem;">${userProjects.length}</strong><span style="font-size:0.6rem;color:#8a9aa8;">Projects</span></div><div style="text-align:center;background:#f8fafc;border-radius:12px;padding:8px;border:1px solid #edf2f7;"><strong style="display:block;font-size:1rem;">${completedProjects}</strong><span style="font-size:0.6rem;color:#8a9aa8;">Completed</span></div><div style="text-align:center;background:#f8fafc;border-radius:12px;padding:8px;border:1px solid #edf2f7;"><strong style="display:block;font-size:1rem;">${followers}</strong><span style="font-size:0.6rem;color:#8a9aa8;">Followers</span></div><div style="text-align:center;background:#f8fafc;border-radius:12px;padding:8px;border:1px solid #edf2f7;"><strong style="display:block;font-size:1rem;">${user.totalEarned || 0}</strong><span style="font-size:0.6rem;color:#8a9aa8;">Earned Coin</span></div><div style="text-align:center;background:#f8fafc;border-radius:12px;padding:8px;border:1px solid #edf2f7;"><strong style="display:block;font-size:1rem;">L${user.level || 1}</strong><span style="font-size:0.6rem;color:#8a9aa8;">Level</span></div><div style="text-align:center;background:#f8fafc;border-radius:12px;padding:8px;border:1px solid #edf2f7;"><strong style="display:block;font-size:1rem;">${new Date(user.joinDate).toLocaleDateString()}</strong><span style="font-size:0.6rem;color:#8a9aa8;">Joined</span></div></div><button class="follow-btn ${isFollowing ? 'following' : ''}" onclick="toggleFollow('${userId}')" style="display:block;width:100%;padding:8px;border-radius:40px;border:2px solid #0d6efd;background:${isFollowing ? '#0d6efd' : 'transparent'};color:${isFollowing ? 'white' : '#0d6efd'};font-weight:600;cursor:pointer;transition:0.2s;">${isFollowing ? '✅ Following' : '➕ Follow'}</button></div>${userProjects.length > 0 ? `<div class="mt-3"><h6 class="fw-bold"><i class="fas fa-list me-2"></i>${user.name}-এর প্রকল্পসমূহ</h6>${userProjects.slice(0, 5).map(p => `<div class="my-project-card" onclick="openProjectModal('${p.id}')"><div class="d-flex gap-2"><div class="project-mini-thumb">${p.thumbnail ? `<img src="${p.thumbnail}" loading="lazy" />` : `<i class="fas fa-image" style="display:flex;align-items:center;justify-content:center;height:100%;"></i>`}</div><div class="flex-1"><strong>${p.title || 'Project'}</strong><div class="small text-muted">${p.platform || '—'} · ${p.taskNames || '—'}</div><div class="small">🪙 ${p.reward || 0} Coin · 👥 ${p.completed || 0}/${p.participants || 0}</div></div></div></div>`).join('')}${userProjects.length > 5 ? `<p class="text-muted small">এবং আরও ${userProjects.length - 5}টি প্রকল্প...</p>` : ''}</div>` : '<p class="text-muted small">এই ইউজার এখনো কোনো প্রকল্প তৈরি করেনি</p>'}`;
                 document.getElementById('userProfileContent').innerHTML = content;
                 document.getElementById('userProfileModal').classList.add('active');
             } catch (error) { showToast('❌ প্রোফাইল লোড করতে সমস্যা'); console.error('User profile error:', error); }
@@ -4510,7 +4205,7 @@
                 const task = tasks[key];
                 const reward = typeof task === 'object' ? task.reward : task;
                 const active = typeof task === 'object' ? task.active !== false : true;
-                return active ? `<div class="task-select-btn" data-task="${key}" data-reward="${reward}" onclick="toggleCreateTask(this)" style="padding:14px 10px;border-radius:16px;border:3px solid #e2e8f0;background:white;text-align:center;cursor:pointer;transition:all 0.2s;font-weight:600;font-size:0.95rem;color:#2d3f4f;display:flex;align-items:center;justify-content:center;gap:8px;"><i class="fas fa-check-circle" style="display:none;color:#6c3ce0;"></i>${key} (${reward} Coin)</div>` : '';
+                return active ? `<div class="task-select-btn" data-task="${key}" data-reward="${reward}" onclick="toggleCreateTask(this)" style="padding:14px 10px;border-radius:16px;border:3px solid #e2e8f0;background:white;text-align:center;cursor:pointer;transition:all 0.2s;font-weight:600;font-size:0.95rem;color:#2d3f4f;display:flex;align-items:center;justify-content:center;gap:8px;"><i class="fas fa-check-circle" style="display:none;color:#0d6efd;"></i>${key} (${reward} Coin)</div>` : '';
             }).filter(Boolean).join('');
             selectedTasks = [];
             updateCreateSummary();
@@ -4518,7 +4213,7 @@
 
         window.toggleCreateTask = function(el) {
             el.classList.toggle('selected');
-            if (el.classList.contains('selected')) { el.style.borderColor = '#6c3ce0'; el.style.background = '#e8f0fe'; el.style.color = '#6c3ce0'; el.querySelector('i').style.display = 'inline'; }
+            if (el.classList.contains('selected')) { el.style.borderColor = '#0d6efd'; el.style.background = '#e8f0fe'; el.style.color = '#0d6efd'; el.querySelector('i').style.display = 'inline'; }
             else { el.style.borderColor = '#e2e8f0'; el.style.background = 'white'; el.style.color = '#2d3f4f'; el.querySelector('i').style.display = 'none'; }
             const container = document.getElementById('createTaskList');
             const selected = container.querySelectorAll('.task-select-btn.selected');
@@ -4713,7 +4408,7 @@
             const toggle = document.getElementById('darkModeToggle');
             const sideToggle = document.getElementById('sideDarkMode');
             if (toggle.textContent === 'Off') {
-                toggle.textContent = 'On'; sideToggle.textContent = 'On'; sideToggle.style.background = '#6c3ce0'; document.body.classList.add('dark-mode'); localStorage.setItem('f24_darkMode', 'on'); showToast('🌙 ডার্ক মোড চালু');
+                toggle.textContent = 'On'; sideToggle.textContent = 'On'; sideToggle.style.background = '#0d6efd'; document.body.classList.add('dark-mode'); localStorage.setItem('f24_darkMode', 'on'); showToast('🌙 ডার্ক মোড চালু');
             } else {
                 toggle.textContent = 'Off'; sideToggle.textContent = 'Off'; sideToggle.style.background = '#6c757d'; document.body.classList.remove('dark-mode'); localStorage.setItem('f24_darkMode', 'off'); showToast('☀️ লাইট মোড চালু');
             }
@@ -4724,7 +4419,7 @@
             if (darkMode === 'on') {
                 document.getElementById('darkModeToggle').textContent = 'On';
                 document.getElementById('sideDarkMode').textContent = 'On';
-                document.getElementById('sideDarkMode').style.background = '#6c3ce0';
+                document.getElementById('sideDarkMode').style.background = '#0d6efd';
                 document.body.classList.add('dark-mode');
             }
         }
@@ -4888,103 +4583,6 @@
             document.querySelectorAll('[data-countdown-since]').forEach(el => { const t = Number(el.dataset.countdownSince); if (t) el.textContent = '(জমা দেওয়ার পর ' + fmtLeft(Date.now() - t) + ')'; });
         }, 1000);
 
-        // ==========================================================
-        // ===== WEBSITE: landing, auth entry, verification gate =====
-        // ==========================================================
-        let landingLoaded = false;
-        function showLanding() {
-            ['authPage', 'userApp'].forEach(id => { document.getElementById(id).style.display = 'none'; });
-            document.getElementById('landingPage').style.display = 'block'; document.body.classList.add('on-landing'); window.scrollTo(0, 0); loadLanding();
-        }
-        window.goHome = showLanding;
-        let appEntered = false;
-        window.enterDashboard = function() {
-            if (!currentUser) { document.documentElement.classList.remove('has-session'); goAuth('login'); return; }
-            if (appEntered) { document.getElementById('landingPage').style.display = 'none'; document.body.classList.remove('on-landing'); document.getElementById('userApp').style.display = 'block'; window.scrollTo(0, 0); return; }
-            appEntered = true; enterApp();
-        };
-        window.goAuth = function(mode) {
-            if (currentUser) { enterDashboard(); return; }
-            document.getElementById('landingPage').style.display = 'none'; document.body.classList.remove('on-landing');
-            document.getElementById('authPage').style.display = 'flex'; window.scrollTo(0, 0);
-            if (mode === 'register') showRegisterForm(); else showLoginForm();
-        };
-        const lpBn = (n) => String(n).replace(/\d/g, d => '০১২৩৪৫৬৭৮৯'[d]);
-        async function loadLanding() {
-            if (landingLoaded) return; landingLoaded = true;
-            let d = {}; try { d = (await get(ref(db, 'settings/landing'))).val() || {}; } catch (e) {}
-            const keys = ['workers', 'tasks', 'paid', 'active']; let any = false;
-            keys.forEach(k => { const el = document.querySelector(`#lpStats [data-k="${k}"]`), v = Number(d[k]) || 0; if (v > 0) any = true; if (!el) return; let t0 = null;
-                const step = (t) => { if (!t0) t0 = t; const p = Math.min((t - t0) / 1200, 1); el.textContent = lpBn(Math.round(v * p).toLocaleString('en-US')) + (p === 1 ? '+' : ''); if (p < 1) requestAnimationFrame(step); }; requestAnimationFrame(step); });
-            document.getElementById('lpStats').style.display = any ? 'block' : 'none';
-            const defs = [{ n: 'রাকিব, ঢাকা', t: 'কাজের নিয়ম পরিষ্কার, অ্যাপ্রুভাল দ্রুত হয়। ওয়ালেটে আয় সহজে দেখা যায়।', s: 5 }, { n: 'সুমাইয়া, চট্টগ্রাম', t: 'প্রিমিয়াম নিয়ে নিজের প্রজেক্ট তৈরি করেছি, অংশগ্রহণকারীদের কাজ যাচাই করা খুব সহজ।', s: 5 }, { n: 'ইমরান, সিলেট', t: 'ভেরিফাইড ইউজার হওয়ায় এখানে ভুয়া কাজের ঝামেলা কম।', s: 4 }];
-            const list = String(d.reviews || '').split('\n').map(l => l.split('|').map(x => x.trim())).filter(a => a[0] && a[1]).map(a => ({ n: a[0], t: a[1], s: Math.min(5, Math.max(1, Number(a[2]) || 5)) }));
-            const esc = (t) => String(t).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-            document.getElementById('lpReviews').innerHTML = (list.length ? list : defs).map(r => `<div class="lp-rv"><div class="st">${'★'.repeat(r.s)}${'☆'.repeat(5 - r.s)}</div><p>${esc(r.t)}</p><b>${esc(r.n)}</b></div>`).join('');
-            loadLandingProjects();
-        }
-        function loadLandingProjects() {
-            const box = document.getElementById('lpLiveJobs');
-            if (!box) return;
-            onValue(projectsRef, (snap) => {
-                const data = snap.val() || {};
-                const items = Object.entries(data)
-                    .filter(([key, p]) => p && p.status === 'live' && !p.hidden && Number(p.remaining) > 0)
-                    .map(([id, p]) => ({ id, ...p }))
-                    .sort((a, b) => Number(b.timestamp || 0) - Number(a.timestamp || 0))
-                    .slice(0, 6);
-                if (!items.length) {
-                    box.innerHTML = '<div class="lp-live-empty"><i class="fas fa-inbox me-2"></i>এই মুহূর্তে নতুন কাজ নেই। পরে আবার দেখুন।</div>';
-                    return;
-                }
-                const esc = (v) => String(v == null ? '' : v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-                box.innerHTML = items.map(p => {
-                    const n = String(p.platform || '').toLowerCase();
-                    let ic = 'fas fa-bolt', bg = '#6c3ce0';
-                    if (n.includes('youtube')) { ic = 'fab fa-youtube'; bg = '#ff3d4a'; }
-                    else if (n.includes('facebook')) { ic = 'fab fa-facebook-f'; bg = '#2f6bff'; }
-                    else if (n.includes('instagram')) { ic = 'fab fa-instagram'; bg = '#e1306c'; }
-                    else if (n.includes('tiktok')) { ic = 'fab fa-tiktok'; bg = '#111827'; }
-                    else if (n.includes('telegram')) { ic = 'fab fa-telegram-plane'; bg = '#20a4e0'; }
-                    const taskNames = String(p.taskNames || (Array.isArray(p.tasks) ? p.tasks.join(', ') : '')).split(',').map(x => x.trim()).filter(Boolean).slice(0, 2);
-                    const thumb = p.thumbnail ? `<img class="lp-live-thumb" src="${esc(p.thumbnail)}" alt="" loading="lazy">` : `<span class="lp-live-thumb lp-live-thumb-fallback" style="background:${bg}"><i class="${ic}"></i></span>`;
-                    return `<article class="lp-live-job">
-                        ${thumb}
-                        <div class="lp-live-main">
-                            <strong class="lp-live-title">${esc(p.title || 'নতুন কাজ')}</strong>
-                            <div class="lp-live-tags"><span class="lp-platform">${esc(p.platform || 'অন্যান্য')}</span>${taskNames.map(t => `<span>${esc(t)}</span>`).join('')}</div>
-                            <div class="lp-live-meta"><strong><i class="fas fa-coins me-1"></i>${Number(p.reward || 0)} Coin</strong><span><i class="fas fa-users me-1"></i>${Number(p.remaining || 0)}টি বাকি</span></div>
-                        </div>
-                        <button class="lp-live-join" onclick="landingJoinProject('${esc(p.id)}')">Join Now</button>
-                    </article>`;
-                }).join('');
-            }, (err) => {
-                console.error('Landing projects error:', err);
-                box.innerHTML = '<div class="lp-live-empty">কাজের তালিকা এখন লোড করা যাচ্ছে না।</div>';
-            });
-        }
-        window.landingJoinProject = function(id) {
-            if (!currentUser) { goAuth('login'); return; }
-            enterDashboard();
-            setTimeout(() => { if (typeof window.openProjectModal === 'function') window.openProjectModal(id); }, 700);
-        };
-        window.landingViewAllJobs = function() {
-            if (!currentUser) { goAuth('register'); return; }
-            enterDashboard();
-            setTimeout(() => { if (typeof window.navigateTo === 'function') window.navigateTo('home'); }, 500);
-        };
-        function needVerify() { return verifySettings.enabled !== false && !(currentUser && currentUser.verified); }
-        const _openProject = window.openProjectModal;
-        window.openProjectModal = function(id) {
-            if (currentUser && needVerify()) { showToast(verifyData && verifyData.status === 'pending' ? '⏳ ভেরিফিকেশন যাচাই চলছে — অনুমোদনের পর কাজ করতে পারবেন' : '🔒 কাজ করার আগে ভেরিফিকেশন সম্পন্ন করুন'); openVerify(); return; }
-            return _openProject(id);
-        };
-        const _logout = window.logoutUser;
-        window.logoutUser = function() { _logout(); if (!currentUser) showLanding(); };
-        document.addEventListener('click', () => { const m = document.getElementById('webUserMenu'); if (m) m.classList.remove('open'); });
-        let lastAv = null;
-        setInterval(() => { if (!currentUser) return; const k = currentUser.profilePic || ''; if (k === lastAv) return; lastAv = k; document.getElementById('webAv').innerHTML = k ? `<img src="${k}" />` : '<i class="fas fa-user"></i>'; }, 2000);
-
 
         // ==========================================================
         // ===== LEADERBOARD + FAQ/SAFETY (shared by user app & website) =====
@@ -5011,41 +4609,6 @@
             const tips = String(d.safety || '').split('\n').map(x => x.trim()).filter(Boolean), faq = parseFaq(d.faq);
             document.getElementById('infoSafety').innerHTML = (tips.length ? tips : SAFETY_DEF).map(t => `<li>${escT(t)}</li>`).join('');
             document.getElementById('infoFaq').innerHTML = (faq.length ? faq : FAQ_DEF).map(a => `<details><summary>${escT(a[0])}</summary><p>${escT(a[1])}</p></details>`).join('');
-        };
-
-
-        // ===== website: job icons, theme (Light/Dark/System), calculator, admin-editable FAQ =====
-        function jobIcon(p) {
-            const n = String(p.platform || '').toLowerCase();
-            if (n.includes('youtube')) return { ic: 'fab fa-youtube', bg: '#ff3d4a' }; if (n.includes('facebook')) return { ic: 'fab fa-facebook-f', bg: '#2f6bff' };
-            if (n.includes('instagram')) return { ic: 'fab fa-instagram', bg: '#e1306c' }; if (n.includes('tiktok')) return { ic: 'fab fa-tiktok', bg: '#111827' };
-            if (n.includes('telegram')) return { ic: 'fab fa-telegram-plane', bg: '#20a4e0' }; if (n.includes('twitter') || n === 'x') return { ic: 'fab fa-x-twitter', bg: '#111827' };
-            return { ic: 'fas fa-bolt', bg: '#6c3ce0' };
-        }
-        function applyTheme() {
-            const m = localStorage.getItem('f24_theme') || (localStorage.getItem('f24_darkMode') === 'on' ? 'dark' : 'light');
-            const dark = m === 'dark' || (m === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
-            document.body.classList.toggle('dark-mode', dark);
-            ['darkModeToggle', 'sideDarkMode'].forEach(id => { const e = document.getElementById(id); if (e) e.textContent = dark ? 'On' : 'Off'; });
-            localStorage.setItem('f24_darkMode', dark ? 'on' : 'off');
-            document.querySelectorAll('.theme-btn').forEach(b => b.classList.toggle('active', b.dataset.m === m));
-        }
-        window.setTheme = function(m) { localStorage.setItem('f24_theme', m); applyTheme(); };
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyTheme);
-        const _toggleDark = window.toggleDarkMode;
-        window.toggleDarkMode = function() { _toggleDark(); localStorage.setItem('f24_theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light'); applyTheme(); };
-        applyTheme();
-        function calcEarn() {
-            const t = Number(document.getElementById('calcTasks').value), r = Number(document.getElementById('calcReward').value), f = (n) => lpBn(n.toLocaleString('en-US'));
-            document.getElementById('calcTasksV').textContent = lpBn(t); document.getElementById('calcRewardV').textContent = lpBn(r);
-            document.getElementById('calcDay').textContent = f(t * r); document.getElementById('calcMonth').textContent = f(t * r * 30);
-        }
-        ['calcTasks', 'calcReward'].forEach(id => document.getElementById(id).addEventListener('input', calcEarn));
-        const _loadLanding = loadLanding;
-        loadLanding = async function() {
-            await _loadLanding();
-            try { const d = (await get(ref(db, 'settings/landing'))).val() || {}, faq = parseFaq(d.faq);
-                if (faq.length) document.getElementById('lpFaqList').innerHTML = faq.map(a => `<details><summary>${escT(a[0])}</summary><p>${escT(a[1])}</p></details>`).join(''); } catch (e) {}
         };
 
         initApp();
